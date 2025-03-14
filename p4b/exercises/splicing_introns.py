@@ -38,7 +38,8 @@ print(f"Percentage of DNA sequence that is coding: {round(percent_coding_region,
 
 # print out the full sequence with coding region in uppercase and non-coding in lowercase
 non_coding = intron_sequence.lower()
-full_sequence = exon_1.upper() + non_coding + exon_2.upper()
+full_sequence = exon_1 + non_coding + exon_2
 # print
 print("##################################################################")
 print(f"Full Sequence: {full_sequence}")
+#print(sequence[0:64] + sequence[64:91].lower() + sequence[91:])

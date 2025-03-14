@@ -6,7 +6,7 @@
 sequence = "ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT"
 
 # run calculations
-at_content = sequence.count('A') + sequence.count('T') / len(sequence) * 100
+at_content = (sequence.count('A') + sequence.count('T')) / len(sequence) * 100
 
 # return value
-print(f"The AT content of the sequence {sequence} is {round(at_content, 2)}%")
+print(f"The AT content of the sequence {sequence} is {round(at_content, 4)}%")
