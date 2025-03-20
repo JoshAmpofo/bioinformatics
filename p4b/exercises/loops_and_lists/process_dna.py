@@ -11,20 +11,19 @@ Task: Write a program that will:
 
 # get sequence file
 dna_sequences = open("../../exercises and examples/lists_and_loops/exercises/input.txt")
-trimmed_sequences = []
+
+# create a new file to hold the new sequences
+new_sequence_file = open("trimmed_sequences.txt", "w")
 
 # write a loop to access the DNA sequences
-for dna_line in dna_sequences.readlines():
+for dna_line in dna_sequences:
     trimmed_sequence = dna_line[14:] # trim the adapter sequence
-    trimmed_sequences.append(trimmed_sequence)
-    dna_sequences.close()
-
-for sequence in trimmed_sequences:
-    new_sequence_file = open("trimmed_sequences.txt", "a") # create a new file to hold the new sequences
-    new_sequence_file.write(sequence) # write trimmed/cleaned sequences to new file
-    
-    # close files
-    new_sequence_file.close()
-    
+    new_sequence_file.write(trimmed_sequence) # write trimmed/cleaned sequences to new file
     # print length
-    print(f"Length of trimmed sequences: {len(sequence)}")
+    print(f"Length of trimmed sequences: {len(trimmed_sequence)}")
+
+# close file
+dna_sequences.close()
+
+    
+
