@@ -11,37 +11,30 @@ The program has to:
 '''
 
 # open appropriate files
-dna = open("../../exercises and examples/lists_and_loops/exercises/genomic_dna.txt")
+dna = open("../../exercises and examples/lists_and_loops/exercises/genomic_dna.txt").read()
 exons = open("../../exercises and examples/lists_and_loops/exercises/exons.txt")
 
-positions = [] # set list to hold split exon positions
+# store coding sequences (from sliced exon positions)
+coding_sequence = ""
 
 # load contents
-for line in exons.readlines():
-    line = line.strip().split(',') # split exon positions
-    positions.append(line)
+for line in exons:
+    positions = line.strip().split(',') # split exon positions
 
-# store sliced exons from sequence
-concatenated_exons = ""
-
-# read dna sequence
-sequence = dna.read().strip()
-
-# get beginning and ending slice positions
-for lst in positions:
-    start = int(lst[0])
-    end = int(lst[1])
+    # get beginning and ending slice positions (convert to int)
+    start = int(positions[0])
+    end = int(positions[1])
     
-    exon = sequence[start:end] # get exons from positions
+    exon = dna[start:end] # get exon sequences
     #print(f"Positions: {start}:{end} exon: {exon}") # visualize what is been added to output file
-    concatenated_exons += exon # combine new exons into one string
+    coding_sequence += exon # append exons to coding sequence
 
-# create and write new wxons to file
+# create and write new exons to file
 new_exon_file = open("new_exons.txt", "w")
-new_exon_file.write(concatenated_exons)
+new_exon_file.write(coding_sequence)
 
 # close files
-dna.close()
 exons.close()
+new_exon_file.close()
         
     
