@@ -10,12 +10,12 @@ Task: Write a program that will:
 """
 
 # get sequence file
-dna_sequences = open("../exercises and examples/lists_and_loops/exercises/input.txt")
+dna_sequences = open("../../exercises and examples/lists_and_loops/exercises/input.txt")
 trimmed_sequences = []
 
 # write a loop to access the DNA sequences
 for dna_line in dna_sequences.readlines():
-    trimmed_sequence = dna_line[15:] # trim the adapter sequence
+    trimmed_sequence = dna_line[14:] # trim the adapter sequence
     trimmed_sequences.append(trimmed_sequence)
     dna_sequences.close()
 
