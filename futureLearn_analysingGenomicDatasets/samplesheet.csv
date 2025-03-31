@@ -1,0 +1,6 @@
+sample,fastq_1,fastq_2
+ERR5181310,ViralRecon/ERR5181310_1.fastq.gz,ViralRecon/ERR5181310_2.fastq.gz
+ERR5405022,ViralRecon/ERR5405022_1.fastq.gz,ViralRecon/ERR5405022_2.fastq.gz
+ERR5556343,ViralRecon/ERR5556343_1.fastq.gz,ViralRecon/ERR5556343_2.fastq.gz
+ERR5743893,ViralRecon/ERR5743893_1.fastq.gz,ViralRecon/ERR5743893_2.fastq.gz
+SRR13500958,ViralRecon/SRR13500958_1.fastq.gz,ViralRecon/SRR13500958_2.fastq.gz
