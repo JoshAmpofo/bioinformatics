@@ -12,7 +12,7 @@ function should pass the following assertions:
 """
 
 
-def get_multi_aa_res(protein, residue=[], sig_figs=2):
+def get_multi_aa_res(protein, residue=["A", "I", "L", "M", "F", "W", "Y", "V"], sig_figs=2):
     """
     Calculate the percentage of an amino acid residue in a sequence.
 
@@ -26,14 +26,10 @@ def get_multi_aa_res(protein, residue=[], sig_figs=2):
     prot_length = len(protein)
     res_count = 0 # set counter to count all residues present in protein
     
-    if not residue:
-        residue = ["A", "I", "L", "M", "F", "W", "Y", "V"]
-        for res in residue:
-            res_count += protein.count(res)
-    elif residue:
-        for res in residue:
-            res = res.upper()
-            res_count += protein.count(res)
+    # get residue count
+    for res in residue:
+        res = res.upper()
+        res_count += protein.count(res)
     
     # calculate residue percentage
     res_percent = (res_count / prot_length) * 100
