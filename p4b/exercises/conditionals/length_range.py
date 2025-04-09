@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Read a csv file and print out the gene names for all genes between 90 and 110 bases long
