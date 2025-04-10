@@ -34,7 +34,7 @@ def get_at_content(data):
         organism_name = split_lines[0]
         gene_name = split_lines[2]
         results.append((gene_name, round_at_content))
-    
+
     return results
 
 
