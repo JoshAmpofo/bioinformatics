@@ -29,7 +29,7 @@ def search_for_five(accessions: list) -> str:
     # search for names that contain the number 5
     results = []
     for accession in accessions:
-        patterns = re.search(r"(.+)5(.+)", accession)
+        patterns = re.search(r"5", accession)
         if patterns:
             results.append(accession)
     return results
@@ -67,7 +67,7 @@ def search_d_and_e(accessions: list) -> list:
     # search for names that contain the letter d and e in that order
     results = []
     for accession in accessions:
-        patterns = re.search(r"de(.+)", accession)
+        patterns = re.search(r"d.*e", accession)
         if patterns:
             results.append(accession)
     return results
@@ -86,7 +86,7 @@ def search_d_and_e_with_one_letter_in_between(accessions: list) -> list:
     # search for names that contain the letter d and e with one letter in between
     results = []
     for accession in accessions:
-        patterns = re.search(r"d[a-zA-Z]e", accession)
+        patterns = re.search(r"d.e", accession)
         if patterns:
             results.append(accession)
     return results
@@ -105,7 +105,7 @@ def search_d_and_e_in_any_order(accessions: list) -> list:
     # search for names that contain the letter d and e in any order
     results = []
     for accession in accessions:
-        patterns = re.search(r"(.+)[de](.+)[de](.+)", accession)
+        patterns = re.search(r"d.*e", accession) or re.search(r"e.*d", accession)
         if patterns:
             results.append(accession)
     return results
