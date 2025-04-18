@@ -30,8 +30,11 @@ def test_translate_dna():
     
     # Test with empty codon list
     assert translate_dna([]) == "", "Failed to handle empty codon list"
+    
+    # Test with unknown codon
+    assert translate_dna(["ACG", "ANC", "GAT"]) == "TXD", "Failed to handle unknown codon"
 
 if __name__ == '__main__':
     test_create_codon_list()
     test_translate_dna()
-    print("All tests passed!") 
+    # print("All tests passed!") 
