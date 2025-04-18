@@ -33,18 +33,7 @@ def create_codon_list(dna_sequence) -> list:
         
     return codons
 
-        
-def translate_dna(codons: list) -> str:
-    """
-    Takes a list of codons and translates them to proteins.
-    
-    Arg(s):
-        codons (list): list of codons
-    
-    Returns:
-        str: protein sequence string 
-    """
-    gencode = { 'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
+gencode = { 'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
                'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
                'AAC':'N', 'AAT':'N', 'AAA':'K', 'AAG':'K',
                'AGC':'S', 'AGT':'S', 'AGA':'R', 'AGG':'R', 
@@ -60,11 +49,22 @@ def translate_dna(codons: list) -> str:
                'TTC':'F', 'TTT':'F', 'TTA':'L', 'TTG':'L', 
                'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_', 
                'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W'
-            }
+            } 
+       
+def translate_dna(codons: list) -> str:
+    """
+    Takes a list of codons and translates them to proteins.
+    
+    Arg(s):
+        codons (list): list of codons
+    
+    Returns:
+        str: protein sequence string 
+    """
     # loop through codon list and check for their corresponding amino acid residue
     protein = []
     for codon in codons:
-        prot_residue = gencode.get(codon)
+        prot_residue = gencode.get(codon, 'X') # add X to translate for an unknown codon
         protein.append(prot_residue)
     
     prot_sequence = "".join(protein)
@@ -75,9 +75,9 @@ def translate_dna(codons: list) -> str:
 def main():
     dna_seq = input("Please enter a nucleotide sequence: ")
     codons = create_codon_list(dna_seq)
-    print(codons)
     protein_sequence = translate_dna(codons)
     
+    print(f"Codons are: {codons}")
     print(f"Protein sequence is: {protein_sequence}")
     
 
