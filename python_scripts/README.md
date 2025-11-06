@@ -49,7 +49,7 @@ If the sequences are different lengths, the script will report an error and exit
 
 ## Examples and testing
 
-You can test the script quickly from the shell using short sequences as shown above. For automated checks consider adding a small unit test or a set of example calls (e.g., a tiny pytest file or a shell script under `tests/`).
+You can test the script quickly from the shell using short sequences as shown above.
 
 ## Troubleshooting
 
