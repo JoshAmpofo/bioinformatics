@@ -75,7 +75,8 @@ MIT.
 
 ## Contact
 
-Maintainer: Josh Ampofo
+### Maintainer: Josh Ampofo
+
 ampofojoshuayent@gmail.com
 ---
 
