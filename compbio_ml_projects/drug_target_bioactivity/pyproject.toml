@@ -1,0 +1,13 @@
+[project]
+name = "drug-target-bioactivity"
+version = "0.1.0"
+description = "Predict whether a compound–protein pair is active or inactive using features derived from SMILES strings and protein sequences."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.3.4",
+    "pandas>=2.3.3",
+    "rdkit>=2025.9.1",
+    "scikit-learn>=1.7.2",
+    "xgboost>=3.1.1",
+]
