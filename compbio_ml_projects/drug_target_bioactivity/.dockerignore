@@ -1,0 +1,6 @@
+# flyctl launch added from .venv/.gitignore
+.venv/**/*
+
+# flyctl launch added from fastapi-serve/.gitignore
+fastapi-serve/**/*
+fly.toml
