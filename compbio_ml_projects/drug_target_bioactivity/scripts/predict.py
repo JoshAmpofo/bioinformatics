@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from preprocessing import preprocess_input
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, field_validator
@@ -11,14 +12,17 @@ from joblib import load
 
 app = FastAPI(title="Drug-Target Activity Predictor", version="1.0")
 
-MODEL_PATH = '../models/bioactivity_prediction_rf_model.joblib'
+MODEL_PATH = './models/bioactivity_prediction_rf_model.joblib'
 
 try:
-    biopred_model = load(MODEL_PATH)
+    biopred_model = load(MODEL_PATH, mmap_mode='r')
 except Exception as e:
     biopred_model = None
     load_error = str(e)
-else:load_error = None
+    print("MODEL LOAD ERROR:", load_error)
+else:
+    load_error = None
+    print("Model loaded successfully")
     
 
 class PredictRequest(BaseModel):
@@ -169,5 +173,6 @@ def predict_batch(req: PredictBatchRequest):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='0.0.0.0', port=9696)
+    port = int(os.environ.get("PORT", 9696))
+    uvicorn.run(app, host='0.0.0.0', port=port)
 
