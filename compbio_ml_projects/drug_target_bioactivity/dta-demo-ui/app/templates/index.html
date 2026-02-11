@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DTA Predictor</title>
+</head>
+<body>
+    <h1>Welcome to the DTA Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="smiles">SMILES:</label>
+        <input type="text" id="smiles" name="smiles" required><br><br>
+
+        <label for="protein">Protein Sequence:</label>
+        <textarea id="protein" name="protein" required></textarea><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
