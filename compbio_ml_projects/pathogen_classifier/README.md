@@ -1,6 +1,6 @@
-# Pathogen Classifier
+# OpenViroTax
 
-ML-based viral genome classifier for Infectious diseases in Africa
+A confidence-based viral-family classifier
 
 > ⚠️ **Under active rework — OpenViroTax-Africa (June 2026).** This project is
 > being rebuilt as **OpenViroTax**: a *confidence-calibrated, abstaining,
