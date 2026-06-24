@@ -1,0 +1,140 @@
+# Pathogen Classifier Configuration
+# Starting configuration for ML-based viral genome classifier
+
+# Project Information
+project:
+  name: "pathogen-classifier"
+  version: "0.1.0"
+  description: "ML-based viral genome classifier for Infectious diseases in Africa"
+
+# Data Configuration
+data:
+  # Input data paths
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  
+  # Sequence processing parameters
+  sequence:
+    min_length: 100          # Minimum sequence length to consider
+    max_length: 30000        # Maximum sequence length (typical viral genome range)
+    kmer_size: 6             # K-mer size for feature extraction
+    overlap: 1               # Overlap between k-mers (1 = sliding window)
+  
+  # Data splits
+  train_split: 0.7
+  validation_split: 0.15
+  test_split: 0.15
+
+# Model Configuration
+model:
+  # Model type (start with simple options)
+  type: "cnn"  # Options: "cnn", "lstm", "transformer"
+  
+  # Basic hyperparameters
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  
+  # Early stopping
+  patience: 10
+  min_delta: 0.001
+  
+  # Model architecture (CNN specific)
+  cnn:
+    filters: [64, 128, 256]
+    kernel_size: 3
+    dropout_rate: 0.3
+    dense_units: [512, 256]
+
+# Training Configuration
+training:
+  # Output paths
+  model_save_dir: "models"
+  checkpoint_dir: "models/checkpoints"
+  logs_dir: "logs"
+  
+  # Training options
+  verbose: 1
+  save_best_only: true
+  monitor: "val_accuracy"
+  
+  # Data augmentation (for future expansion)
+  augmentation:
+    enabled: false
+
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Log outputs
+  console: true
+  file: 
+    enabled: true
+    path: "logs/pathogen_classifier.log"
+    max_size: "10MB"
+    backup_count: 5
+
+# API Configuration (for Flask web service)
+api:
+  host: "0.0.0.0"
+  port: 5000
+  debug: true  # Set to false in production
+  cors:
+    enabled: true
+    origins: ["http://localhost:3000"]
+
+# Performance Configuration
+performance:
+  # Number of CPU cores for data loading
+  num_workers: 4
+  
+  # GPU configuration
+  gpu:
+    enabled: true
+    memory_growth: true  # Allow GPU memory to grow as needed
+
+# Pathogen Classes (start with common viral families)
+classes:
+  target_families:
+    - "Coronaviridae" # coronaviruses
+    - "Orthomyxoviridae" # influenza viruses
+    - "Flaviviridae" # yellow fever, dengue, zika viruses
+    - "Filoviridae" # Ebola, Marburg viruses
+    - "Paramyxoviridae" # measles, mumps viruses
+    - "Arenaviridae" # Lassa fever, Junin virus
+    - "Retroviridae" # HIV, HTLV viruses
+
+  # Class encoding will be automatically generated
+  num_classes: 5
+
+# Feature Engineering
+features:
+  # Sequence encoding method
+  encoding: "one_hot"  # Options: "one_hot", "integer", "embedding"
+  
+  # Additional features to extract
+  compositional:
+    gc_content: true
+    amino_acid_composition: true
+  
+  # Sliding window for sequence chunking
+  window:
+    size: 1000
+    stride: 500
+
+# Environment
+environment: "development"  # Options: development, testing, production
+
+# Database (for future expansion)
+database:
+  enabled: false
+  # Future: connection strings, query limits, etc.
+
+# External APIs (for future expansion)
+external_apis:
+  ncbi:
+    enabled: true
+    email: "ampofojoshuayent@gmail.com"
+    # Future: API keys, rate limits, etc.
+

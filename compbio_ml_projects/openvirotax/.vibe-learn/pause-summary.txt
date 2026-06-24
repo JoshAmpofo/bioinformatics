@@ -1,0 +1,6 @@
+⏸ vibe-learn — what just happened:
+Goal: yes, let's just update the README with a short description
+
+  ✦ Edited /home/reyes/bioinformatics/compbio_ml_projects/pathogen_classifier/README.md
+
+ /learn [question]  ·  /digest  ·  vibe-learn briefing  ·  vibe-learn audio-prep
