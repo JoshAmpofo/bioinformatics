@@ -1,0 +1,3 @@
+Comparison	Upregulated	Downregulated	Total_significant	padj_threshold	abs_log2FC_threshold
+HT55_itraconazole_vs_control	845	725	1570	0.05	1
+SW948_itraconazole_vs_control	2064	2667	4731	0.05	1
