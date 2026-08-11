@@ -1,0 +1,29 @@
+sample	generation	run	chrom	position	ref	alt	qual	allele	consequence	impact	gene	gene_id	feature_type	feature_id	biotype	hgvs_c	hgvs_p
+Ara3_50000	50000	SRR2584866	CP000819.1	621324	A	G	225.417	G	downstream_gene_variant	MODIFIER	rnk	ECB_00578	transcript	ECB_00578	protein_coding	c.*4284T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	622005	A	G	225.417	G	downstream_gene_variant	MODIFIER	rnk	ECB_00578	transcript	ECB_00578	protein_coding	c.*3603T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	627610	G	A	154.006	A	missense_variant	MODERATE	citT	ECB_00580	transcript	ECB_00580	protein_coding	c.1022C>T	p.Thr341Ile
+Ara3_50000	50000	SRR2584866	CP000819.1	627610	G	A	154.006	A	upstream_gene_variant	MODIFIER	rnk	ECB_00578	transcript	ECB_00578	protein_coding	c.-1592C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	627610	G	A	154.006	A	downstream_gene_variant	MODIFIER	citG	ECB_00581	transcript	ECB_00581	protein_coding	c.*1072C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	627610	G	A	154.006	A	downstream_gene_variant	MODIFIER	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.*2480C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	627610	G	A	154.006	A	downstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.*4023C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	630279	C	T	225.417	T	synonymous_variant	LOW	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.1344G>A	p.Pro448Pro
+Ara3_50000	50000	SRR2584866	CP000819.1	630279	C	T	225.417	T	upstream_gene_variant	MODIFIER	rnk	ECB_00578	transcript	ECB_00578	protein_coding	c.-4261G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	630279	C	T	225.417	T	upstream_gene_variant	MODIFIER	citT	ECB_00580	transcript	ECB_00580	protein_coding	c.-1648G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	630279	C	T	225.417	T	upstream_gene_variant	MODIFIER	citG	ECB_00581	transcript	ECB_00581	protein_coding	c.-719G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	630279	C	T	225.417	T	downstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.*1354G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	631472	C	T	225.417	T	missense_variant	MODERATE	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.151G>A	p.Glu51Lys
+Ara3_50000	50000	SRR2584866	CP000819.1	631472	C	T	225.417	T	upstream_gene_variant	MODIFIER	citT	ECB_00580	transcript	ECB_00580	protein_coding	c.-2841G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	631472	C	T	225.417	T	upstream_gene_variant	MODIFIER	citG	ECB_00581	transcript	ECB_00581	protein_coding	c.-1912G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	631472	C	T	225.417	T	downstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.*161G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	634174	G	A	228.336	A	upstream_gene_variant	MODIFIER	citG	ECB_00581	transcript	ECB_00581	protein_coding	c.-4614C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	634174	G	A	228.336	A	upstream_gene_variant	MODIFIER	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.-2552C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	634174	G	A	228.336	A	upstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.-1633C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	634603	A	G	228.274	G	upstream_gene_variant	MODIFIER	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.-2981T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	634603	A	G	228.274	G	upstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.-2062T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	635244	C	T	225.417	T	upstream_gene_variant	MODIFIER	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.-3622G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	635244	C	T	225.417	T	upstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.-2703G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	636294	A	AGG	228.365	AGG	upstream_gene_variant	MODIFIER	citF	ECB_00583	transcript	ECB_00583	protein_coding	c.-4674_-4673dupCC	
+Ara3_50000	50000	SRR2584866	CP000819.1	636294	A	AGG	228.365	AGG	upstream_gene_variant	MODIFIER	citE	ECB_00584	transcript	ECB_00584	protein_coding	c.-3755_-3754dupCC	
+Ara3_50000	50000	SRR2584866	CP000819.1	3612959	C	T	225.417	T	upstream_gene_variant	MODIFIER	dctA	ECB_03376	transcript	ECB_03376	protein_coding	c.-20G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	3613010	G	A	225.417	A	upstream_gene_variant	MODIFIER	dctA	ECB_03376	transcript	ECB_03376	protein_coding	c.-71C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	3616490	C	T	225.417	T	upstream_gene_variant	MODIFIER	dctA	ECB_03376	transcript	ECB_03376	protein_coding	c.-3551G>A	

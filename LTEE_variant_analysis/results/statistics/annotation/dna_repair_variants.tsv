@@ -1,0 +1,23 @@
+sample	generation	run	chrom	position	ref	alt	qual	allele	consequence	impact	gene	gene_id	feature_type	feature_id	biotype	hgvs_c	hgvs_p
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	missense_variant	MODERATE	dam	ECB_03239	transcript	ECB_03239	protein_coding	c.421C>A	p.Pro141Thr
+Ara3_50000	50000	SRR2584866	CP000819.1	213751	A	G	225.417	G	downstream_gene_variant	MODIFIER	dnaE	ECB_00182	transcript	ECB_00182	protein_coding	c.*2301A>G	
+Ara3_50000	50000	SRR2584866	CP000819.1	235408	T	C	225.417	C	upstream_gene_variant	MODIFIER	dnaQ	ECB_00208	transcript	ECB_00208	protein_coding	c.-3583T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	235496	C	T	225.417	T	upstream_gene_variant	MODIFIER	dnaQ	ECB_00208	transcript	ECB_00208	protein_coding	c.-3495C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	241885	G	A	228.241	A	downstream_gene_variant	MODIFIER	dnaQ	ECB_00208	transcript	ECB_00208	protein_coding	c.*2163G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	241950	T	A	228.296	A	downstream_gene_variant	MODIFIER	dnaQ	ECB_00208	transcript	ECB_00208	protein_coding	c.*2228T>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	2716283	G	C	228.423	C	downstream_gene_variant	MODIFIER	recA	ECB_02549	transcript	ECB_02549	protein_coding	c.*1284C>G	
+Ara3_50000	50000	SRR2584866	CP000819.1	2723460	C	T	225.417	T	upstream_gene_variant	MODIFIER	recA	ECB_02549	transcript	ECB_02549	protein_coding	c.-4832G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	2747391	G	A	225.417	A	upstream_gene_variant	MODIFIER	mutS	ECB_02583	transcript	ECB_02583	protein_coding	c.-4562G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	2749219	G	A	225.417	A	upstream_gene_variant	MODIFIER	mutS	ECB_02583	transcript	ECB_02583	protein_coding	c.-2734G>A	
+Ara3_50000	50000	SRR2584866	CP000819.1	2753451	G	A	225.417	A	missense_variant	MODERATE	mutS	ECB_02583	transcript	ECB_02583	protein_coding	c.1499G>A	p.Arg500His
+Ara3_50000	50000	SRR2584866	CP000819.1	2753768	C	T	225.417	T	stop_gained	HIGH	mutS	ECB_02583	transcript	ECB_02583	protein_coding	c.1816C>T	p.Gln606*
+Ara3_50000	50000	SRR2584866	CP000819.1	2843036	G	A	225.417	A	downstream_gene_variant	MODIFIER	recB	ECB_02668	transcript	ECB_02668	protein_coding	c.*4044C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	2853806	A	G	225.417	G	missense_variant	MODERATE	recC	ECB_02670	transcript	ECB_02670	protein_coding	c.3242T>C	p.Val1081Ala
+Ara3_50000	50000	SRR2584866	CP000819.1	2853806	A	G	225.417	G	upstream_gene_variant	MODIFIER	recB	ECB_02668	transcript	ECB_02668	protein_coding	c.-3184T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	2989622	GA	G	228.393	G	frameshift_variant	HIGH	mutY	ECB_02791	transcript	ECB_02791	protein_coding	c.951delA	p.Gly318fs
+Ara3_50000	50000	SRR2584866	CP000819.1	3441172	A	G	225.417	G	downstream_gene_variant	MODIFIER	dam	ECB_03239	transcript	ECB_03239	protein_coding	c.*2587T>C	
+Ara3_50000	50000	SRR2584866	CP000819.1	3442743	G	A	225.417	A	downstream_gene_variant	MODIFIER	dam	ECB_03239	transcript	ECB_03239	protein_coding	c.*1016C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	4377265	A	G	225.422	G	missense_variant	MODERATE	mutL	ECB_04037	transcript	ECB_04037	protein_coding	c.1699A>G	p.Ser567Gly
+Ara3_50000	50000	SRR2584866	CP000819.1	4380317	A	G	225.417	G	downstream_gene_variant	MODIFIER	mutL	ECB_04037	transcript	ECB_04037	protein_coding	c.*2903A>G	
+Ara3_50000	50000	SRR2584866	CP000819.1	4380609	C	T	225.417	T	downstream_gene_variant	MODIFIER	mutL	ECB_04037	transcript	ECB_04037	protein_coding	c.*3195C>T	
+Ara3_50000	50000	SRR2584866	CP000819.1	4382294	C	T	225.417	T	downstream_gene_variant	MODIFIER	mutL	ECB_04037	transcript	ECB_04037	protein_coding	c.*4880C>T	

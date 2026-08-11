@@ -1,0 +1,84 @@
+sample	generation	run	chrom	position	ref	alt	qual	allele	consequence	impact	gene	gene_id	feature_type	feature_id	biotype	hgvs_c	hgvs_p
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	missense_variant	MODERATE	mrdB	ECB_00603	transcript	ECB_00603	protein_coding	c.206G>A	p.Arg69His
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	upstream_gene_variant	MODIFIER	ybeF	ECB_00598	transcript	ECB_00598	protein_coding	c.-4731G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	upstream_gene_variant	MODIFIER	lipB	ECB_00599	transcript	ECB_00599	protein_coding	c.-3831G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	upstream_gene_variant	MODIFIER	ybeD	ECB_00600	transcript	ECB_00600	protein_coding	c.-3467G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	upstream_gene_variant	MODIFIER	dacA	ECB_00601	transcript	ECB_00601	protein_coding	c.-2146G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	upstream_gene_variant	MODIFIER	rlpA	ECB_00602	transcript	ECB_00602	protein_coding	c.-918G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	downstream_gene_variant	MODIFIER	mrdA	ECB_00604	transcript	ECB_00604	protein_coding	c.*208G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	downstream_gene_variant	MODIFIER	ybeA	ECB_00605	transcript	ECB_00605	protein_coding	c.*2140G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	downstream_gene_variant	MODIFIER	ybeB	ECB_00606	transcript	ECB_00606	protein_coding	c.*2611G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	downstream_gene_variant	MODIFIER	phpB	ECB_00607	transcript	ECB_00607	protein_coding	c.*3188G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	downstream_gene_variant	MODIFIER	nadD	ECB_00608	transcript	ECB_00608	protein_coding	c.*3823G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	648692	C	T	225.417	T	downstream_gene_variant	MODIFIER	holA	ECB_00609	transcript	ECB_00609	protein_coding	c.*4466G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	1331794	C	A	225.417	A	missense_variant	MODERATE	topA	ECB_01250	transcript	ECB_01250	protein_coding	c.2375C>A	p.Thr792Lys
+Ara3_5000	5000	SRR2589044	CP000819.1	1331794	C	A	225.417	A	upstream_gene_variant	MODIFIER	yciK	ECB_01247	transcript	ECB_01247	protein_coding	c.-4310G>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1331794	C	A	225.417	A	upstream_gene_variant	MODIFIER	yciN	ECB_01249	transcript	ECB_01249	protein_coding	c.-2754G>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1331794	C	A	225.417	A	upstream_gene_variant	MODIFIER	cysB	ECB_01251	transcript	ECB_01251	protein_coding	c.-433C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	1331794	C	A	225.417	A	upstream_gene_variant	MODIFIER	acnA	ECB_01253	transcript	ECB_01253	protein_coding	c.-2409C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	1331794	C	A	225.417	A	downstream_gene_variant	MODIFIER	sohB	ECB_01248	transcript	ECB_01248	protein_coding	c.*3041C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	missense_variant	MODERATE	pykF	ECB_01645	transcript	ECB_01645	protein_coding	c.379G>A	p.Asp127Asn
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	upstream_gene_variant	MODIFIER	ydhW	ECB_01641	transcript	ECB_01641	protein_coding	c.-4352C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	upstream_gene_variant	MODIFIER	ydhV	ECB_01642	transcript	ECB_01642	protein_coding	c.-2246C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	upstream_gene_variant	MODIFIER	ydhY	ECB_01643	transcript	ECB_01643	protein_coding	c.-1599C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	upstream_gene_variant	MODIFIER	ydhZ	ECB_01644	transcript	ECB_01644	protein_coding	c.-935C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	upstream_gene_variant	MODIFIER	lpp	ECB_01646	transcript	ECB_01646	protein_coding	c.-1345G>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	downstream_gene_variant	MODIFIER	ynhG	ECB_01647	transcript	ECB_01647	protein_coding	c.*1645C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	downstream_gene_variant	MODIFIER	sufE	ECB_01648	transcript	ECB_01648	protein_coding	c.*2798C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	downstream_gene_variant	MODIFIER	sufS	ECB_01649	transcript	ECB_01649	protein_coding	c.*3227C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	1733343	G	A	225.417	A	downstream_gene_variant	MODIFIER	sufD	ECB_01650	transcript	ECB_01650	protein_coding	c.*4444C>T	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	frameshift_variant	HIGH	ECB_01992	ECB_01992	transcript	ECB_01992	protein_coding	c.182_185dupCCAG	p.Arg62fs
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	upstream_gene_variant	MODIFIER	ogrK	ECB_01987	transcript	ECB_01987	protein_coding	c.-3264_-3261dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	upstream_gene_variant	MODIFIER	yegZ	ECB_01988	transcript	ECB_01988	protein_coding	c.-2403_-2400dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	upstream_gene_variant	MODIFIER	ECB_01989	ECB_01989	transcript	ECB_01989	protein_coding	c.-1200_-1197dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	upstream_gene_variant	MODIFIER	ECB_01991	ECB_01991	transcript	ECB_01991	protein_coding	c.-639_-636dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	upstream_gene_variant	MODIFIER	ECB_01993	ECB_01993	transcript	ECB_01993	protein_coding	c.-34_-33insCAGC	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	downstream_gene_variant	MODIFIER	yegQ	ECB_01986	transcript	ECB_01986	protein_coding	c.*3751_*3752insCAGC	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	downstream_gene_variant	MODIFIER	ECB_01990	ECB_01990	transcript	ECB_01990	protein_coding	c.*806_*807insCAGC	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	downstream_gene_variant	MODIFIER	ECB_01994	ECB_01994	transcript	ECB_01994	protein_coding	c.*1360_*1363dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	downstream_gene_variant	MODIFIER	ECB_01995	ECB_01995	transcript	ECB_01995	protein_coding	c.*4229_*4232dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	2103887	A	ACAGC	207.185	ACAGC	downstream_gene_variant	MODIFIER	ECB_01996	ECB_01996	transcript	ECB_01996	protein_coding	c.*4752_*4755dupGCTG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	missense_variant	MODERATE	dam	ECB_03239	transcript	ECB_03239	protein_coding	c.421C>A	p.Pro141Thr
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	upstream_gene_variant	MODIFIER	yhfX	ECB_03233	transcript	ECB_03233	protein_coding	c.-4517C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	upstream_gene_variant	MODIFIER	yhfY	ECB_03234	transcript	ECB_03234	protein_coding	c.-4071C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	upstream_gene_variant	MODIFIER	yhfZ	ECB_03235	transcript	ECB_03235	protein_coding	c.-3149C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	upstream_gene_variant	MODIFIER	trpS	ECB_03236	transcript	ECB_03236	protein_coding	c.-1855C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	upstream_gene_variant	MODIFIER	gph	ECB_03237	transcript	ECB_03237	protein_coding	c.-1104C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	upstream_gene_variant	MODIFIER	rpe	ECB_03238	transcript	ECB_03238	protein_coding	c.-434C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	downstream_gene_variant	MODIFIER	damX	ECB_03240	transcript	ECB_03240	protein_coding	c.*527C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	downstream_gene_variant	MODIFIER	aroB	ECB_03241	transcript	ECB_03241	protein_coding	c.*1905C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	downstream_gene_variant	MODIFIER	aroK	ECB_03242	transcript	ECB_03242	protein_coding	c.*3050C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3444175	G	T	225.417	T	downstream_gene_variant	MODIFIER	hofQ	ECB_03243	transcript	ECB_03243	protein_coding	c.*3972C>A	
+Ara3_5000	5000	SRR2589044	CP000819.1	3481820	A	G	225.417	G	missense_variant	MODERATE	malT	ECB_03270	transcript	ECB_03270	protein_coding	c.136A>G	p.Thr46Ala
+Ara3_5000	5000	SRR2589044	CP000819.1	3481820	A	G	225.417	G	upstream_gene_variant	MODIFIER	malQ	ECB_03268	transcript	ECB_03268	protein_coding	c.-3150T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	3481820	A	G	225.417	G	upstream_gene_variant	MODIFIER	malP	ECB_03269	transcript	ECB_03269	protein_coding	c.-747T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	3481820	A	G	225.417	G	downstream_gene_variant	MODIFIER	rtcA	ECB_03271	transcript	ECB_03271	protein_coding	c.*2613T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	3481820	A	G	225.417	G	downstream_gene_variant	MODIFIER	rtcB	ECB_03272	transcript	ECB_03272	protein_coding	c.*3633T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	yieM	ECB_03629	transcript	ECB_03629	protein_coding	c.-3587_-3586insC	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	yieN	ECB_03630	transcript	ECB_03630	protein_coding	c.-2097_-2096insC	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	insJ-5	ECB_03632	transcript	ECB_03632	protein_coding	c.-51_-50insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	insK-5	ECB_03633	transcript	ECB_03633	protein_coding	c.-569_-568insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	rbsD	ECB_03634	transcript	ECB_03634	protein_coding	c.-1608_-1607insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	rbsA	ECB_03635	transcript	ECB_03635	protein_coding	c.-2035_-2034insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	rbsC	ECB_03636	transcript	ECB_03636	protein_coding	c.-3545_-3544insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	upstream_gene_variant	MODIFIER	rbsB	ECB_03637	transcript	ECB_03637	protein_coding	c.-4535_-4534insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	downstream_gene_variant	MODIFIER	kup	ECB_03631	transcript	ECB_03631	protein_coding	c.*5_*6insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	3893550	A	AG	228.341	AG	intergenic_region	MODIFIER	kup-insJ-5	ECB_03631-ECB_03632	intergenic_region	ECB_03631-ECB_03632		n.3893550_3893551insG	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	missense_variant	MODERATE	hslU	ECB_03816	transcript	ECB_03816	protein_coding	c.1048T>C	p.Ser350Pro
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	upstream_gene_variant	MODIFIER	glpK	ECB_03811	transcript	ECB_03811	protein_coding	c.-3479T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	upstream_gene_variant	MODIFIER	glpF	ECB_03812	transcript	ECB_03812	protein_coding	c.-2611T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	upstream_gene_variant	MODIFIER	menG	ECB_03814	transcript	ECB_03814	protein_coding	c.-1370T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	upstream_gene_variant	MODIFIER	menA	ECB_03815	transcript	ECB_03815	protein_coding	c.-351T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	downstream_gene_variant	MODIFIER	yiiU	ECB_03813	transcript	ECB_03813	protein_coding	c.*1940A>G	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	downstream_gene_variant	MODIFIER	hslV	ECB_03817	transcript	ECB_03817	protein_coding	c.*1057T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	downstream_gene_variant	MODIFIER	ftsN	ECB_03818	transcript	ECB_03818	protein_coding	c.*1680T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	downstream_gene_variant	MODIFIER	cytR	ECB_03819	transcript	ECB_03819	protein_coding	c.*2731T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4100183	A	G	225.417	G	downstream_gene_variant	MODIFIER	priA	ECB_03820	transcript	ECB_03820	protein_coding	c.*3912T>C	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	frameshift_variant	HIGH	ytfN	ECB_04092	transcript	ECB_04092	protein_coding	c.3526_3527delGG	p.Gly1176fs
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	upstream_gene_variant	MODIFIER	ytfP	ECB_04093	transcript	ECB_04093	protein_coding	c.-257_-256delGG	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	upstream_gene_variant	MODIFIER	ytfQ	ECB_04096	transcript	ECB_04096	protein_coding	c.-1818_-1817delGG	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	upstream_gene_variant	MODIFIER	ytfR	ECB_04097	transcript	ECB_04097	protein_coding	c.-2914_-2913delGG	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	upstream_gene_variant	MODIFIER	ytfT	ECB_04098	transcript	ECB_04098	protein_coding	c.-4430_-4429delGG	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	downstream_gene_variant	MODIFIER	ytfM	ECB_04091	transcript	ECB_04091	protein_coding	c.*3522_*3523delGG	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	downstream_gene_variant	MODIFIER	yzfA	ECB_04094	transcript	ECB_04094	protein_coding	c.*338_*339delCC	
+Ara3_5000	5000	SRR2589044	CP000819.1	4431393	TGG	T	228.417	T	downstream_gene_variant	MODIFIER	ppa	ECB_04095	transcript	ECB_04095	protein_coding	c.*977_*978delCC	

@@ -1,0 +1,161 @@
+
+# Summary table 
+
+Name , Value
+Genome , REL606 
+Date , 2026-08-11 07:41
+SnpEff_version , SnpEff 5.4c (build 2026-02-23 07:25), by Pablo Cingolani
+Command_line_arguments , SnpEff  -stats results/statistics/annotation/SRR2589044.snpeff_summary.html -csvStats results/statistics/annotation/SRR2589044.snpeff_stats.csv REL606 results/vcf/SRR2589044.PASS.norm.vcf.gz 
+Warnings , 1 
+Number_of_lines_in_input_file, 9
+Number_of_variants_before_filter, 9
+Number_of_not_variants , 0
+Number_of_variants_processed , 9
+Number_of_known_variants (i.e. non-empty ID) , 0, 0% 
+Number_of_effects , 83 
+Genome_total_length ,4629812 
+Genome_effective_length ,4629812 
+Change_rate , 514423 
+
+# Change rate by chromosome
+
+Chromosome , Length , Changes , Change_rate 
+CP000819.1 , 4629812 , 9 , 514423
+
+# Variantss by type
+
+Type , Count , Percent 
+DEL , 1 , 11.111111% 
+INS , 2 , 22.222222% 
+SNP , 6 , 66.666667% 
+
+# Effects by impact
+
+Type , Count , Percent 
+HIGH , 2 , 2.409639% 
+MODERATE , 6 , 7.228916% 
+MODIFIER , 75 , 90.361446% 
+
+# Effects by functional class
+
+Type , Count , Percent 
+MISSENSE , 6 , 100% 
+
+Missense_Silent_ratio, 0
+
+# Count by effects
+
+Type , Count , Percent 
+downstream_gene_variant , 31 , 37.349398% 
+frameshift_variant , 2 , 2.409639% 
+intergenic_region , 1 , 1.204819% 
+missense_variant , 6 , 7.228916% 
+upstream_gene_variant , 43 , 51.807229% 
+
+# Count by genomic region
+
+Type , Count , Percent 
+DOWNSTREAM , 31 , 37.349398% 
+EXON , 8 , 9.638554% 
+INTERGENIC , 1 , 1.204819% 
+UPSTREAM , 43 , 51.807229% 
+
+# Quality 
+
+Values , 207,225,228
+Count , 1,6,2
+
+# InDel lengths
+
+Values , 0,1,3
+Count , 1,1,1
+
+# Base changes
+
+base  , A  , C  , G  , T 
+ A  , 0  , 0  , 2  , 0 
+ C  , 1  , 0  , 0  , 1 
+ G  , 1  , 0  , 0  , 1 
+ T  , 0  , 0  , 0  , 0 
+
+# Ts/Tv summary
+
+Transitions , 4
+Transversions , 2
+Ts_Tv_ratio , 2
+
+# Ts/Tv : All variants
+
+Sample ,Ara3_5000,Total
+Transitions ,4,4
+Transversions ,2,2
+Ts/Tv ,2.000,2.000
+
+
+# Ts/Tv : Known variants
+
+No results available (empty input?)
+
+# Allele frequency
+
+# Allele frequency : All variants
+
+Values , 50
+Count , 9
+
+# Allele Count
+
+Values , 1
+Count , 9
+
+# Hom/Het table
+
+Sample_names , Ara3_5000
+Reference , 0
+Het , 9
+Hom , 0
+Missing , 0
+
+
+# Codon change table
+	
+codons  , -  , AAG  , AAT  , ACC  , ACG  , AGC  , AGG  , CAC  , CAG  , CCC  , CCT  , CGC  , GAT  , GCC  , GGC  , TCT 
+ -   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ AAG   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ AAT   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ ACC   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 1  , 0  , 0 
+ ACG   , 0  , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ AGC   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ AGG   , 0  , 0  , 0  , 0  , 0  , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ CAC   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ CAG   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ CCC   , 0  , 0  , 0  , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ CCT   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ CGC   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ GAT   , 0  , 0  , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ GCC   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ GGC   , 1  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0 
+ TCT   , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 0  , 1  , 0  , 0  , 0  , 0  , 0 
+
+# Amino acid change table
+
+aa  , -  , ?  , A  , D  , G  , H  , K  , N  , P  , Q  , R  , S  , T 
+ - , 0 , 1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 
+ ? , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ A , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ D , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 0 
+ G , 1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ H , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ K , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ N , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ P , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 
+ Q , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+ R , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 0 , 1 , 0 
+ S , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 
+ T , 0 , 0 , 1 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 0 , 0 
+
+# Chromosome change table
+
+CP000819.1, Position,0,100000,200000,300000,400000,500000,600000,700000,800000,900000,1000000,1100000,1200000,1300000,1400000,1500000,1600000,1700000,1800000,1900000,2000000,2100000,2200000,2300000,2400000,2500000,2600000,2700000,2800000,2900000,3000000,3100000,3200000,3300000,3400000,3500000,3600000,3700000,3800000,3900000,4000000,4100000,4200000,4300000,4400000,4500000,4600000
+CP000819.1,Count,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,1,0,0,1,0,0
+
