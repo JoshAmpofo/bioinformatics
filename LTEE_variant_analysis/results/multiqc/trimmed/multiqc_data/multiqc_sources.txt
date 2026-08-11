@@ -1,0 +1,7 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR2584863_1	/home/reyes/bioinformatics/LTEE_variant_analysis/results/fastqc_trimmed/SRR2584863_1.trim_fastqc.zip
+FastQC	all_sections	SRR2584863_2	/home/reyes/bioinformatics/LTEE_variant_analysis/results/fastqc_trimmed/SRR2584863_2.trim_fastqc.zip
+FastQC	all_sections	SRR2584866_1	/home/reyes/bioinformatics/LTEE_variant_analysis/results/fastqc_trimmed/SRR2584866_1.trim_fastqc.zip
+FastQC	all_sections	SRR2584866_2	/home/reyes/bioinformatics/LTEE_variant_analysis/results/fastqc_trimmed/SRR2584866_2.trim_fastqc.zip
+FastQC	all_sections	SRR2589044_1	/home/reyes/bioinformatics/LTEE_variant_analysis/results/fastqc_trimmed/SRR2589044_1.trim_fastqc.zip
+FastQC	all_sections	SRR2589044_2	/home/reyes/bioinformatics/LTEE_variant_analysis/results/fastqc_trimmed/SRR2589044_2.trim_fastqc.zip
