@@ -1,0 +1,4 @@
+sample	generation	run	total_reads	mapped_reads	mapping_percent	properly_paired	properly_paired_percent	mean_depth	breadth_1x_percent	breadth_10x_percent
+Ara3_5000	5000	SRR2589044	1774505	1773407	99.94	1691880	95.34	50.77	99.86	99.83
+Ara3_15000	15000	SRR2584863	2541520	2540574	99.96	2481496	97.64	72.67	99.85	99.84
+Ara3_50000	50000	SRR2584866	4056102	4055173	99.98	4004734	98.73	119.16	93.14	93.07
