@@ -1,0 +1,2 @@
+file                               format  type  num_seqs    sum_len    min_len    avg_len    max_len
+data/reference/ecoli_rel606.fasta  FASTA   DNA          1  4,629,812  4,629,812  4,629,812  4,629,812
