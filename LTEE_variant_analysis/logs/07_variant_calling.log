@@ -1,0 +1,79 @@
+==============================================
+LTEE Ara-3 short-variant calling
+Started: Tue Aug 11 06:37:26 AM GMT 2026
+==============================================
+
+==============================================
+Sample:     Ara3_5000
+Generation: 5000
+Run:        SRR2589044
+==============================================
+Running bcftools mpileup...
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+Calling haploid variants...
+Filtering variants...
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+
+Raw variants:      13
+PASS variants:     9
+PASS SNPs:         6
+PASS indels:       3
+
+==============================================
+Sample:     Ara3_15000
+Generation: 15000
+Run:        SRR2584863
+==============================================
+Running bcftools mpileup...
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+Calling haploid variants...
+Filtering variants...
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+
+Raw variants:      30
+PASS variants:     26
+PASS SNPs:         20
+PASS indels:       6
+
+==============================================
+Sample:     Ara3_50000
+Generation: 50000
+Run:        SRR2584866
+==============================================
+Running bcftools mpileup...
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+Calling haploid variants...
+Filtering variants...
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+
+Raw variants:      817
+PASS variants:     794
+PASS SNPs:         688
+PASS indels:       106
+
+==============================================
+Variant calling completed
+Finished: Tue Aug 11 06:39:36 AM GMT 2026
+==============================================
+sample      generation  run         raw_variants  filtered_variants
+Ara3_5000   5000        SRR2589044  13            9
+Ara3_15000  15000       SRR2584863  30            26
+Ara3_50000  50000       SRR2584866  817           794

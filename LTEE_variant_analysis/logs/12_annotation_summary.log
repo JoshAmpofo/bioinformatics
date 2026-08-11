@@ -1,0 +1,46 @@
+Annotation summaries created.
+
+=== IMPACT ===
+generation  impact    count
+5000        HIGH      2
+5000        MODERATE  6
+5000        MODIFIER  75
+15000       HIGH      3
+15000       MODERATE  17
+15000       MODIFIER  232
+50000       HIGH      72
+50000       LOW       213
+50000       MODERATE  374
+50000       MODIFIER  7367
+
+=== HIGH IMPACT ===
+sample      generation  run         chrom       position  ref  alt    qual     allele  consequence                      impact  gene       gene_id    feature_type  feature_id  biotype         hgvs_c            hgvs_p
+Ara3_5000   5000        SRR2589044  CP000819.1  2103887   A    ACAGC  207.185  ACAGC   frameshift_variant               HIGH    ECB_01992  ECB_01992  transcript    ECB_01992   protein_coding  c.182_185dupCCAG  p.Arg62fs
+Ara3_5000   5000        SRR2589044  CP000819.1  4431393   TGG  T      228.417  T       frameshift_variant               HIGH    ytfN       ECB_04092  transcript    ECB_04092   protein_coding  c.3526_3527delGG  p.Gly1176fs
+Ara3_15000  15000       SRR2584863  CP000819.1  473901    C    CCG    228.411  CCG     frameshift_variant               HIGH    ybaL       ECB_00429  transcript    ECB_00429   protein_coding  c.1403_1404dupCG  p.Ala469fs
+Ara3_15000  15000       SRR2584863  CP000819.1  3901455   A    AC     161.416  AC      frameshift_variant               HIGH    yieO       ECB_03640  transcript    ECB_03640   protein_coding  c.964_965insG     p.Leu322fs
+Ara3_15000  15000       SRR2584863  CP000819.1  4431393   TGG  T      228.408  T       frameshift_variant               HIGH    ytfN       ECB_04092  transcript    ECB_04092   protein_coding  c.3526_3527delGG  p.Gly1176fs
+Ara3_50000  50000       SRR2584866  CP000819.1  16518     T    TC     80.9051  TC      frameshift_variant               HIGH    insL-1     ECB_00016  transcript    ECB_00016   protein_coding  c.1083dupC        p.Arg362fs
+Ara3_50000  50000       SRR2584866  CP000819.1  105581    G    A      225.417  A       stop_gained                      HIGH    ddlB       ECB_00093  transcript    ECB_00093   protein_coding  c.545G>A          p.Trp182*
+Ara3_50000  50000       SRR2584866  CP000819.1  148134    A    AG     228.34   AG      frameshift_variant               HIGH    yadE       ECB_00129  transcript    ECB_00129   protein_coding  c.255dupG         p.Arg86fs
+Ara3_50000  50000       SRR2584866  CP000819.1  157998    GT   G      228.362  G       frameshift_variant               HIGH    htrE       ECB_00138  transcript    ECB_00138   protein_coding  c.272delA         p.Asn91fs
+Ara3_50000  50000       SRR2584866  CP000819.1  172553    CA   C      228.403  C       frameshift_variant               HIGH    fhuA       ECB_00149  transcript    ECB_00149   protein_coding  c.2230delA        p.Thr744fs
+Ara3_50000  50000       SRR2584866  CP000819.1  175213    GA   G      228.355  G       frameshift_variant               HIGH    fhuB       ECB_00152  transcript    ECB_00152   protein_coding  c.912delA         p.Val305fs
+Ara3_50000  50000       SRR2584866  CP000819.1  233686    C    CT     228.387  CT      frameshift_variant               HIGH    yafC       ECB_00201  transcript    ECB_00201   protein_coding  c.119dupA         p.Leu41fs
+Ara3_50000  50000       SRR2584866  CP000819.1  337563    C    T      225.417  T       stop_gained                      HIGH    lacZ       ECB_00298  transcript    ECB_00298   protein_coding  c.1299G>A         p.Trp433*
+Ara3_50000  50000       SRR2584866  CP000819.1  360604    T    TG     228.37   TG      frameshift_variant               HIGH    yaiT       ECB_00321  transcript    ECB_00321   protein_coding  c.1453dupG        p.Ala485fs
+Ara3_50000  50000       SRR2584866  CP000819.1  429704    T    TG     98.9098  TG      frameshift_variant               HIGH    insL-2     ECB_00390  transcript    ECB_00390   protein_coding  c.1083dupC        p.Arg362fs
+Ara3_50000  50000       SRR2584866  CP000819.1  451177    C    CA     228.411  CA      frameshift_variant               HIGH    ylaC       ECB_00409  transcript    ECB_00409   protein_coding  c.141dupT         p.Ala48fs
+Ara3_50000  50000       SRR2584866  CP000819.1  473901    C    CCG    228.412  CCG     frameshift_variant               HIGH    ybaL       ECB_00429  transcript    ECB_00429   protein_coding  c.1403_1404dupCG  p.Ala469fs
+Ara3_50000  50000       SRR2584866  CP000819.1  495902    T    TG     94.9149  TG      frameshift_variant               HIGH    rhsD       ECB_00448  transcript    ECB_00448   protein_coding  c.481dupG         p.Ala161fs
+Ara3_50000  50000       SRR2584866  CP000819.1  636294    A    AGG    228.365  AGG     frameshift_variant               HIGH    citA       ECB_00589  transcript    ECB_00589   protein_coding  c.1476_1477dupGG  p.Val493fs
+Ara3_50000  50000       SRR2584866  CP000819.1  708824    GT   G      225.417  G       frameshift_variant               HIGH    kdpB       ECB_00654  transcript    ECB_00654   protein_coding  c.307delA         p.Thr103fs
+Ara3_50000  50000       SRR2584866  CP000819.1  830946    T    TG     228.374  TG      frameshift_variant               HIGH    ybiI       ECB_00770  transcript    ECB_00770   protein_coding  c.135dupC         p.Ile46fs
+Ara3_50000  50000       SRR2584866  CP000819.1  901822    T    TGG    228.368  TGG     frameshift_variant               HIGH    ECB_00845  ECB_00845  transcript    ECB_00845   protein_coding  c.1377_1378dupGG  p.Ala460fs
+Ara3_50000  50000       SRR2584866  CP000819.1  917183    A    AG     228.363  AG      frameshift_variant               HIGH    artJ       ECB_00865  transcript    ECB_00865   protein_coding  c.99dupC          p.Phe34fs
+Ara3_50000  50000       SRR2584866  CP000819.1  998936    C    CG     228.375  CG      frameshift_variant               HIGH    ycbB       ECB_00929  transcript    ECB_00929   protein_coding  c.804dupG         p.Pro269fs
+Ara3_50000  50000       SRR2584866  CP000819.1  1018106   GA   G      228.417  G       frameshift_variant               HIGH    ycbS       ECB_00944  transcript    ECB_00944   protein_coding  c.1808delA        p.Asn603fs
+Ara3_50000  50000       SRR2584866  CP000819.1  1019308   AG   A      228.372  A       frameshift_variant               HIGH    ycbT       ECB_00945  transcript    ECB_00945   protein_coding  c.418delG         p.Asp140fs
+Ara3_50000  50000       SRR2584866  CP000819.1  1046822   GA   G      208.139  G       frameshift_variant               HIGH    yccW       ECB_00971  transcript    ECB_00971   protein_coding  c.151delT         p.Ser51fs
+Ara3_50000  50000       SRR2584866  CP000819.1  1062285   G    GC     228.405  GC      frameshift_variant               HIGH    yccZ       ECB_00986  transcript    ECB_00986   protein_coding  c.609dupG         p.Leu204fs
+Ara3_50000  50000       SRR2584866  CP000819.1  1407377   C    T      225.417  T       stop_gained                      HIGH    dbpA       ECB_01320  transcript    ECB_01320   protein_coding  c.697C>T          p.Gln233*

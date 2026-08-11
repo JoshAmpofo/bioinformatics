@@ -1,0 +1,25 @@
+==============================================
+Extracting annotations: SRR2589044
+==============================================
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[OK] results/statistics/annotation/SRR2589044.annotated_variants.tsv
+==============================================
+Extracting annotations: SRR2584863
+==============================================
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[OK] results/statistics/annotation/SRR2584863.annotated_variants.tsv
+==============================================
+Extracting annotations: SRR2584866
+==============================================
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+[OK] results/statistics/annotation/SRR2584866.annotated_variants.tsv
+
+==============================================
+Annotation extraction complete
+==============================================
+
+Combined table:
+results/statistics/annotation/all_annotated_variants.tsv
+
+Number of annotation records:
+8361

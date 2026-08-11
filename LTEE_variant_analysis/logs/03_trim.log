@@ -1,0 +1,183 @@
+==============================================
+LTEE Ara-3 read trimming
+Started: Tue Aug 11 12:22:18 AM GMT 2026
+==============================================
+Using adapter file:
+/home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa
+
+----------------------------------------------
+Sample:     Ara3_5000
+Generation: 5000
+Run:        SRR2589044
+----------------------------------------------
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 -summary results/statistics/trimming/SRR2589044.trimmomatic_summary.txt data/raw/SRR2589044_1.fastq.gz data/raw/SRR2589044_2.fastq.gz data/trimmed/SRR2589044_1.trim.fastq.gz data/trimmed/unpaired/SRR2589044_1.unpaired.fastq.gz data/trimmed/SRR2589044_2.trim.fastq.gz data/trimmed/unpaired/SRR2589044_2.unpaired.fastq.gz ILLUMINACLIP:/home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa:2:40:15 SLIDINGWINDOW:4:20 MINLEN:25
+ILLUMINACLIP: Using adapter file from user-specified absolute path: /home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 1107090 Both Surviving: 877521 (79.26%) Forward Only Surviving: 224158 (20.25%) Reverse Only Surviving: 2200 (0.20%) Dropped: 3211 (0.29%)
+TrimmomaticPE: Completed successfully
+
+----------------------------------------------
+Sample:     Ara3_15000
+Generation: 15000
+Run:        SRR2584863
+----------------------------------------------
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 -summary results/statistics/trimming/SRR2584863.trimmomatic_summary.txt data/raw/SRR2584863_1.fastq.gz data/raw/SRR2584863_2.fastq.gz data/trimmed/SRR2584863_1.trim.fastq.gz data/trimmed/unpaired/SRR2584863_1.unpaired.fastq.gz data/trimmed/SRR2584863_2.trim.fastq.gz data/trimmed/unpaired/SRR2584863_2.unpaired.fastq.gz ILLUMINACLIP:/home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa:2:40:15 SLIDINGWINDOW:4:20 MINLEN:25
+ILLUMINACLIP: Using adapter file from user-specified absolute path: /home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 1553259 Both Surviving: 1263898 (81.37%) Forward Only Surviving: 281499 (18.12%) Reverse Only Surviving: 3224 (0.21%) Dropped: 4638 (0.30%)
+TrimmomaticPE: Completed successfully
+
+Checking trimmed FASTQ integrity...
+[OK] data/trimmed/SRR2584863_1.trim.fastq.gz
+[OK] data/trimmed/SRR2584863_2.trim.fastq.gz
+[OK] data/trimmed/SRR2589044_1.trim.fastq.gz
+[OK] data/trimmed/SRR2589044_2.trim.fastq.gz
+
+Generating trimmed-read statistics...
+processed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 4 [------] ETA: 0s
+[1A[Jprocessed files:  1 / 4 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 4 [==>---] ETA: 0s
+[1A[Jprocessed files:  2 / 4 [==>---] ETA: 0s
+[1A[Jprocessed files:  2 / 4 [==>---] ETA: 0s
+[1A[Jprocessed files:  2 / 4 [==>---] ETA: 0s
+[1A[Jprocessed files:  3 / 4 [====>-] ETA: 0s
+[1A[Jprocessed files:  4 / 4 [======] ETA: 0s
+[1A[Jprocessed files:  4 / 4 [] ETA: 0s. done
+[1A[Jprocessed files:  4 / 4 [] ETA: 0s. done
+
+==============================================
+Trimming complete
+Finished: Tue Aug 11 12:23:35 AM GMT 2026
+
+Paired reads:
+data/trimmed
+
+Statistics:
+results/statistics/trimming
+==============================================
+==============================================
+LTEE Ara-3 read trimming
+Started: Tue Aug 11 01:13:24 AM GMT 2026
+==============================================
+Using adapter file:
+/home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa
+
+----------------------------------------------
+Sample:     Ara3_5000
+Generation: 5000
+Run:        SRR2589044
+----------------------------------------------
+[SKIP] Trimmed paired reads already exist for SRR2589044
+
+----------------------------------------------
+Sample:     Ara3_15000
+Generation: 15000
+Run:        SRR2584863
+----------------------------------------------
+[SKIP] Trimmed paired reads already exist for SRR2584863
+
+----------------------------------------------
+Sample:     Ara3_50000
+Generation: 50000
+Run:        SRR2584866
+----------------------------------------------
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 -summary results/statistics/trimming/SRR2584866.trimmomatic_summary.txt data/raw/SRR2584866_1.fastq.gz data/raw/SRR2584866_2.fastq.gz data/trimmed/SRR2584866_1.trim.fastq.gz data/trimmed/unpaired/SRR2584866_1.unpaired.fastq.gz data/trimmed/SRR2584866_2.trim.fastq.gz data/trimmed/unpaired/SRR2584866_2.unpaired.fastq.gz ILLUMINACLIP:/home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa:2:40:15 SLIDINGWINDOW:4:20 MINLEN:25
+ILLUMINACLIP: Using adapter file from user-specified absolute path: /home/reyes/miniconda3/envs/ltee-variant-analysis/share/trimmomatic-0.40-0/adapters/NexteraPE-PE.fa
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 2768398 Both Surviving: 2021085 (73.01%) Forward Only Surviving: 611486 (22.09%) Reverse Only Surviving: 123583 (4.46%) Dropped: 12244 (0.44%)
+TrimmomaticPE: Completed successfully
+
+Checking trimmed FASTQ integrity...
+[OK] data/trimmed/SRR2584863_1.trim.fastq.gz
+[OK] data/trimmed/SRR2584863_2.trim.fastq.gz
+[OK] data/trimmed/SRR2584866_1.trim.fastq.gz
+[OK] data/trimmed/SRR2584866_2.trim.fastq.gz
+[OK] data/trimmed/SRR2589044_1.trim.fastq.gz
+[OK] data/trimmed/SRR2589044_2.trim.fastq.gz
+
+Generating trimmed-read statistics...
+processed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  0 / 6 [------] ETA: 0s
+[1A[Jprocessed files:  1 / 6 [>-----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  2 / 6 [=>----] ETA: 0s
+[1A[Jprocessed files:  3 / 6 [==>---] ETA: 0s
+[1A[Jprocessed files:  4 / 6 [===>--] ETA: 0s
+[1A[Jprocessed files:  5 / 6 [====>-] ETA: 0s
+[1A[Jprocessed files:  6 / 6 [======] ETA: 0s
+[1A[Jprocessed files:  6 / 6 [] ETA: 0s. done
+[1A[Jprocessed files:  6 / 6 [] ETA: 0s. done
+
+==============================================
+Trimming complete
+Finished: Tue Aug 11 01:14:54 AM GMT 2026
+
+Paired reads:
+data/trimmed
+
+Statistics:
+results/statistics/trimming
+==============================================

@@ -1,0 +1,2714 @@
+================================================================================
+breseq 0.39.0     http://barricklab.org/breseq
+
+Active Developers: Barrick JE, Deatherage DE
+Contact:           <jeffrey.e.barrick@gmail.com>
+
+breseq is free software; you can redistribute it and/or modify it under the
+terms the GNU General Public License as published by the Free Software 
+Foundation; either version 2, or (at your option) any later version.
+
+Copyright (c) 2008-2010 Michigan State University
+Copyright (c) 2011-2022 The University of Texas at Austin
+
+If you use breseq in your research, please cite:
+
+  Deatherage, D.E., Barrick, J.E. (2014) Identification of mutations
+  in laboratory-evolved microbes from next-generation sequencing
+  data using breseq. Methods Mol. Biol. 1151: 165–188.
+
+If you use structural variation (junction) predictions, please cite:
+
+  Barrick, J.E., Colburn, G., Deatherage D.E., Traverse, C.C.,
+  Strand, M.D., Borges, J.J., Knoester, D.B., Reba, A., Meyer, A.G. 
+  (2014) Identifying structural variation in haploid microbial genomes 
+  from short-read resequencing data using breseq. BMC Genomics 15:1039.
+================================================================================
+---> bowtie2  :: version 2.5.4 [/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/bowtie2]
+---> bowtie2  :: NOTE :: breseq output may vary slightly depending on your bowtie2 version,
+---> bowtie2  :: NOTE :: and occasionally bowtie2 versions may have bugs that cause crashes.
+---> bowtie2  :: NOTE :: bowtie2 version 2.4.5 is recommended with this breseq version.
+---> R        :: version 4.3.1 [/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/R]
++++   NOW PROCESSING Read and reference sequence file input
+  READ FILE::SRR2584866_1.trim
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 2021085 bases: 264242420
+    Filtered reads:      42 bases:      5806 (≥90.0% same base)
+    Analyzed reads: 2021043 bases: 264236614
+  READ FILE::SRR2584866_2.trim
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 2021085 bases: 287818024
+    Filtered reads: none
+    Analyzed reads: 2021085 bases: 287818024
+  READ FILE::SRR2584866_1.unpaired
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 611486 bases: 52007279
+    Filtered reads: none
+    Analyzed reads: 611486 bases: 52007279
+  READ FILE::SRR2584866_2.unpaired
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 123583 bases: 13560814
+    Filtered reads: none
+    Analyzed reads: 123583 bases: 13560814
+  ::TOTAL::
+    Original reads: 4777239 bases: 617628537
+    Analyzed reads: 4777197 bases: 617622731
+[samtools] faidx results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.fasta
+  REFERENCE: CP000819
+  LENGTH: 4606252
++++   NOW PROCESSING Read alignment to reference genome
+[system] bowtie2-build -q "results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.fasta" "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference"
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_1.trim.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage1.sam" --un "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage1.unmatched.fastq"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:54
+2021043 reads; of these:
+  2021043 (100.00%) were unpaired; of these:
+    15523 (0.77%) aligned 0 times
+    1930617 (95.53%) aligned exactly 1 time
+    74903 (3.71%) aligned >1 times
+99.23% overall alignment rate
+Time searching: 00:00:54
+Overall time: 00:00:54
+[system] bowtie2 -t --no-unal -p 4 -L 18 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage1.unmatched.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage2.matched.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+15523 reads; of these:
+  15523 (100.00%) were unpaired; of these:
+    212 (1.37%) aligned 0 times
+    8953 (57.68%) aligned exactly 1 time
+    6358 (40.96%) aligned >1 times
+98.63% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_2.trim.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage1.sam" --un "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage1.unmatched.fastq"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:59
+2021085 reads; of these:
+  2021085 (100.00%) were unpaired; of these:
+    9915 (0.49%) aligned 0 times
+    1936636 (95.82%) aligned exactly 1 time
+    74534 (3.69%) aligned >1 times
+99.51% overall alignment rate
+Time searching: 00:00:59
+Overall time: 00:00:59
+[system] bowtie2 -t --no-unal -p 4 -L 19 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage1.unmatched.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage2.matched.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:02
+9915 reads; of these:
+  9915 (100.00%) were unpaired; of these:
+    80 (0.81%) aligned 0 times
+    3813 (38.46%) aligned exactly 1 time
+    6022 (60.74%) aligned >1 times
+99.19% overall alignment rate
+Time searching: 00:00:02
+Overall time: 00:00:02
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_1.unpaired.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage1.sam" --un "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage1.unmatched.fastq"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:12
+611486 reads; of these:
+  611486 (100.00%) were unpaired; of these:
+    4009 (0.66%) aligned 0 times
+    580964 (95.01%) aligned exactly 1 time
+    26513 (4.34%) aligned >1 times
+99.34% overall alignment rate
+Time searching: 00:00:12
+Overall time: 00:00:12
+[system] bowtie2 -t --no-unal -p 4 -L 13 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage1.unmatched.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage2.matched.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+4009 reads; of these:
+  4009 (100.00%) were unpaired; of these:
+    47 (1.17%) aligned 0 times
+    1043 (26.02%) aligned exactly 1 time
+    2919 (72.81%) aligned >1 times
+98.83% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_2.unpaired.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage1.sam" --un "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage1.unmatched.fastq"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:04
+123583 reads; of these:
+  123583 (100.00%) were unpaired; of these:
+    1557 (1.26%) aligned 0 times
+    117808 (95.33%) aligned exactly 1 time
+    4218 (3.41%) aligned >1 times
+98.74% overall alignment rate
+Time searching: 00:00:04
+Overall time: 00:00:04
+[system] bowtie2 -t --no-unal -p 4 -L 15 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage1.unmatched.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage2.matched.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+1557 reads; of these:
+  1557 (100.00%) were unpaired; of these:
+    95 (6.10%) aligned 0 times
+    1006 (64.61%) aligned exactly 1 time
+    456 (29.29%) aligned >1 times
+93.90% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/reference*"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage1.unmatched.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage1.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.stage2.matched.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage1.unmatched.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage1.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.stage2.matched.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage1.unmatched.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage1.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.stage2.matched.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage1.unmatched.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage1.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.stage2.matched.sam"
++++   NOW PROCESSING Preprocessing alignments for candidate junction identification
+Preprocessing alignments.
+  READ FILE::SRR2584866_1.trim
+    ALIGNED READ:100000
+    ALIGNED READ:200000
+    ALIGNED READ:300000
+    ALIGNED READ:400000
+    ALIGNED READ:500000
+    ALIGNED READ:600000
+    ALIGNED READ:700000
+    ALIGNED READ:800000
+    ALIGNED READ:900000
+    ALIGNED READ:1000000
+    ALIGNED READ:1100000
+    ALIGNED READ:1200000
+    ALIGNED READ:1300000
+    ALIGNED READ:1400000
+    ALIGNED READ:1500000
+    ALIGNED READ:1600000
+    ALIGNED READ:1700000
+    ALIGNED READ:1800000
+    ALIGNED READ:1900000
+    ALIGNED READ:2000000
+  READ FILE::SRR2584866_2.trim
+    ALIGNED READ:2100000
+    ALIGNED READ:2200000
+    ALIGNED READ:2300000
+    ALIGNED READ:2400000
+    ALIGNED READ:2500000
+    ALIGNED READ:2600000
+    ALIGNED READ:2700000
+    ALIGNED READ:2800000
+    ALIGNED READ:2900000
+    ALIGNED READ:3000000
+    ALIGNED READ:3100000
+    ALIGNED READ:3200000
+    ALIGNED READ:3300000
+    ALIGNED READ:3400000
+    ALIGNED READ:3500000
+    ALIGNED READ:3600000
+    ALIGNED READ:3700000
+    ALIGNED READ:3800000
+    ALIGNED READ:3900000
+    ALIGNED READ:4000000
+  READ FILE::SRR2584866_1.unpaired
+    ALIGNED READ:4100000
+    ALIGNED READ:4200000
+    ALIGNED READ:4300000
+    ALIGNED READ:4400000
+    ALIGNED READ:4500000
+    ALIGNED READ:4600000
+  READ FILE::SRR2584866_2.unpaired
+    ALIGNED READ:4700000
+  Summary... 
+  Aligned reads:                              4776763
+  Read alignments:                            6404404
+  Alignments split on indels:                     505
+  Reads with alignments split on indels:          280
+  Split alignments:                            135755
+  Reads with split alignments:                  18590
++++   NOW PROCESSING Preliminary analysis of coverage distribution
+[samtools] import results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.fasta.fai results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.sam results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.unsorted.bam
+[samtools] sort --threads 4 -o results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.bam -T results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.bam results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.unsorted.bam
+[samtools] index results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.bam results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.bam.bai
+  REFERENCE: CP000819
+  LENGTH: 4606252
+    POSITION:10000
+    POSITION:20000
+    POSITION:30000
+    POSITION:40000
+    POSITION:50000
+    POSITION:60000
+    POSITION:70000
+    POSITION:80000
+    POSITION:90000
+    POSITION:100000
+    POSITION:110000
+    POSITION:120000
+    POSITION:130000
+    POSITION:140000
+    POSITION:150000
+    POSITION:160000
+    POSITION:170000
+    POSITION:180000
+    POSITION:190000
+    POSITION:200000
+    POSITION:210000
+    POSITION:220000
+    POSITION:230000
+    POSITION:240000
+    POSITION:250000
+    POSITION:260000
+    POSITION:270000
+    POSITION:280000
+    POSITION:290000
+    POSITION:300000
+    POSITION:310000
+    POSITION:320000
+    POSITION:330000
+    POSITION:340000
+    POSITION:350000
+    POSITION:360000
+    POSITION:370000
+    POSITION:380000
+    POSITION:390000
+    POSITION:400000
+    POSITION:410000
+    POSITION:420000
+    POSITION:430000
+    POSITION:440000
+    POSITION:450000
+    POSITION:460000
+    POSITION:470000
+    POSITION:480000
+    POSITION:490000
+    POSITION:500000
+    POSITION:510000
+    POSITION:520000
+    POSITION:530000
+    POSITION:540000
+    POSITION:550000
+    POSITION:560000
+    POSITION:570000
+    POSITION:580000
+    POSITION:590000
+    POSITION:600000
+    POSITION:610000
+    POSITION:620000
+    POSITION:630000
+    POSITION:640000
+    POSITION:650000
+    POSITION:660000
+    POSITION:670000
+    POSITION:680000
+    POSITION:690000
+    POSITION:700000
+    POSITION:710000
+    POSITION:720000
+    POSITION:730000
+    POSITION:740000
+    POSITION:750000
+    POSITION:760000
+    POSITION:770000
+    POSITION:780000
+    POSITION:790000
+    POSITION:800000
+    POSITION:810000
+    POSITION:820000
+    POSITION:830000
+    POSITION:840000
+    POSITION:850000
+    POSITION:860000
+    POSITION:870000
+    POSITION:880000
+    POSITION:890000
+    POSITION:900000
+    POSITION:910000
+    POSITION:920000
+    POSITION:930000
+    POSITION:940000
+    POSITION:950000
+    POSITION:960000
+    POSITION:970000
+    POSITION:980000
+    POSITION:990000
+    POSITION:1000000
+    POSITION:1010000
+    POSITION:1020000
+    POSITION:1030000
+    POSITION:1040000
+    POSITION:1050000
+    POSITION:1060000
+    POSITION:1070000
+    POSITION:1080000
+    POSITION:1090000
+    POSITION:1100000
+    POSITION:1110000
+    POSITION:1120000
+    POSITION:1130000
+    POSITION:1140000
+    POSITION:1150000
+    POSITION:1160000
+    POSITION:1170000
+    POSITION:1180000
+    POSITION:1190000
+    POSITION:1200000
+    POSITION:1210000
+    POSITION:1220000
+    POSITION:1230000
+    POSITION:1240000
+    POSITION:1250000
+    POSITION:1260000
+    POSITION:1270000
+    POSITION:1280000
+    POSITION:1290000
+    POSITION:1300000
+    POSITION:1310000
+    POSITION:1320000
+    POSITION:1330000
+    POSITION:1340000
+    POSITION:1350000
+    POSITION:1360000
+    POSITION:1370000
+    POSITION:1380000
+    POSITION:1390000
+    POSITION:1400000
+    POSITION:1410000
+    POSITION:1420000
+    POSITION:1430000
+    POSITION:1440000
+    POSITION:1450000
+    POSITION:1460000
+    POSITION:1470000
+    POSITION:1480000
+    POSITION:1490000
+    POSITION:1500000
+    POSITION:1510000
+    POSITION:1520000
+    POSITION:1530000
+    POSITION:1540000
+    POSITION:1550000
+    POSITION:1560000
+    POSITION:1570000
+    POSITION:1580000
+    POSITION:1590000
+    POSITION:1600000
+    POSITION:1610000
+    POSITION:1620000
+    POSITION:1630000
+    POSITION:1640000
+    POSITION:1650000
+    POSITION:1660000
+    POSITION:1670000
+    POSITION:1680000
+    POSITION:1690000
+    POSITION:1700000
+    POSITION:1710000
+    POSITION:1720000
+    POSITION:1730000
+    POSITION:1740000
+    POSITION:1750000
+    POSITION:1760000
+    POSITION:1770000
+    POSITION:1780000
+    POSITION:1790000
+    POSITION:1800000
+    POSITION:1810000
+    POSITION:1820000
+    POSITION:1830000
+    POSITION:1840000
+    POSITION:1850000
+    POSITION:1860000
+    POSITION:1870000
+    POSITION:1880000
+    POSITION:1890000
+    POSITION:1900000
+    POSITION:1910000
+    POSITION:1920000
+    POSITION:1930000
+    POSITION:1940000
+    POSITION:1950000
+    POSITION:1960000
+    POSITION:1970000
+    POSITION:1980000
+    POSITION:1990000
+    POSITION:2000000
+    POSITION:2010000
+    POSITION:2020000
+    POSITION:2030000
+    POSITION:2040000
+    POSITION:2050000
+    POSITION:2060000
+    POSITION:2070000
+    POSITION:2080000
+    POSITION:2090000
+    POSITION:2100000
+    POSITION:2110000
+    POSITION:2120000
+    POSITION:2130000
+    POSITION:2140000
+    POSITION:2150000
+    POSITION:2160000
+    POSITION:2170000
+    POSITION:2180000
+    POSITION:2190000
+    POSITION:2200000
+    POSITION:2210000
+    POSITION:2220000
+    POSITION:2230000
+    POSITION:2240000
+    POSITION:2250000
+    POSITION:2260000
+    POSITION:2270000
+    POSITION:2280000
+    POSITION:2290000
+    POSITION:2300000
+    POSITION:2310000
+    POSITION:2320000
+    POSITION:2330000
+    POSITION:2340000
+    POSITION:2350000
+    POSITION:2360000
+    POSITION:2370000
+    POSITION:2380000
+    POSITION:2390000
+    POSITION:2400000
+    POSITION:2410000
+    POSITION:2420000
+    POSITION:2430000
+    POSITION:2440000
+    POSITION:2450000
+    POSITION:2460000
+    POSITION:2470000
+    POSITION:2480000
+    POSITION:2490000
+    POSITION:2500000
+    POSITION:2510000
+    POSITION:2520000
+    POSITION:2530000
+    POSITION:2540000
+    POSITION:2550000
+    POSITION:2560000
+    POSITION:2570000
+    POSITION:2580000
+    POSITION:2590000
+    POSITION:2600000
+    POSITION:2610000
+    POSITION:2620000
+    POSITION:2630000
+    POSITION:2640000
+    POSITION:2650000
+    POSITION:2660000
+    POSITION:2670000
+    POSITION:2680000
+    POSITION:2690000
+    POSITION:2700000
+    POSITION:2710000
+    POSITION:2720000
+    POSITION:2730000
+    POSITION:2740000
+    POSITION:2750000
+    POSITION:2760000
+    POSITION:2770000
+    POSITION:2780000
+    POSITION:2790000
+    POSITION:2800000
+    POSITION:2810000
+    POSITION:2820000
+    POSITION:2830000
+    POSITION:2840000
+    POSITION:2850000
+    POSITION:2860000
+    POSITION:2870000
+    POSITION:2880000
+    POSITION:2890000
+    POSITION:2900000
+    POSITION:2910000
+    POSITION:2920000
+    POSITION:2930000
+    POSITION:2940000
+    POSITION:2950000
+    POSITION:2960000
+    POSITION:2970000
+    POSITION:2980000
+    POSITION:2990000
+    POSITION:3000000
+    POSITION:3010000
+    POSITION:3020000
+    POSITION:3030000
+    POSITION:3040000
+    POSITION:3050000
+    POSITION:3060000
+    POSITION:3070000
+    POSITION:3080000
+    POSITION:3090000
+    POSITION:3100000
+    POSITION:3110000
+    POSITION:3120000
+    POSITION:3130000
+    POSITION:3140000
+    POSITION:3150000
+    POSITION:3160000
+    POSITION:3170000
+    POSITION:3180000
+    POSITION:3190000
+    POSITION:3200000
+    POSITION:3210000
+    POSITION:3220000
+    POSITION:3230000
+    POSITION:3240000
+    POSITION:3250000
+    POSITION:3260000
+    POSITION:3270000
+    POSITION:3280000
+    POSITION:3290000
+    POSITION:3300000
+    POSITION:3310000
+    POSITION:3320000
+    POSITION:3330000
+    POSITION:3340000
+    POSITION:3350000
+    POSITION:3360000
+    POSITION:3370000
+    POSITION:3380000
+    POSITION:3390000
+    POSITION:3400000
+    POSITION:3410000
+    POSITION:3420000
+    POSITION:3430000
+    POSITION:3440000
+    POSITION:3450000
+    POSITION:3460000
+    POSITION:3470000
+    POSITION:3480000
+    POSITION:3490000
+    POSITION:3500000
+    POSITION:3510000
+    POSITION:3520000
+    POSITION:3530000
+    POSITION:3540000
+    POSITION:3550000
+    POSITION:3560000
+    POSITION:3570000
+    POSITION:3580000
+    POSITION:3590000
+    POSITION:3600000
+    POSITION:3610000
+    POSITION:3620000
+    POSITION:3630000
+    POSITION:3640000
+    POSITION:3650000
+    POSITION:3660000
+    POSITION:3670000
+    POSITION:3680000
+    POSITION:3690000
+    POSITION:3700000
+    POSITION:3710000
+    POSITION:3720000
+    POSITION:3730000
+    POSITION:3740000
+    POSITION:3750000
+    POSITION:3760000
+    POSITION:3770000
+    POSITION:3780000
+    POSITION:3790000
+    POSITION:3800000
+    POSITION:3810000
+    POSITION:3820000
+    POSITION:3830000
+    POSITION:3840000
+    POSITION:3850000
+    POSITION:3860000
+    POSITION:3870000
+    POSITION:3880000
+    POSITION:3890000
+    POSITION:3900000
+    POSITION:3910000
+    POSITION:3920000
+    POSITION:3930000
+    POSITION:3940000
+    POSITION:3950000
+    POSITION:3960000
+    POSITION:3970000
+    POSITION:3980000
+    POSITION:3990000
+    POSITION:4000000
+    POSITION:4010000
+    POSITION:4020000
+    POSITION:4030000
+    POSITION:4040000
+    POSITION:4050000
+    POSITION:4060000
+    POSITION:4070000
+    POSITION:4080000
+    POSITION:4090000
+    POSITION:4100000
+    POSITION:4110000
+    POSITION:4120000
+    POSITION:4130000
+    POSITION:4140000
+    POSITION:4150000
+    POSITION:4160000
+    POSITION:4170000
+    POSITION:4180000
+    POSITION:4190000
+    POSITION:4200000
+    POSITION:4210000
+    POSITION:4220000
+    POSITION:4230000
+    POSITION:4240000
+    POSITION:4250000
+    POSITION:4260000
+    POSITION:4270000
+    POSITION:4280000
+    POSITION:4290000
+    POSITION:4300000
+    POSITION:4310000
+    POSITION:4320000
+    POSITION:4330000
+    POSITION:4340000
+    POSITION:4350000
+    POSITION:4360000
+    POSITION:4370000
+    POSITION:4380000
+    POSITION:4390000
+    POSITION:4400000
+    POSITION:4410000
+    POSITION:4420000
+    POSITION:4430000
+    POSITION:4440000
+    POSITION:4450000
+    POSITION:4460000
+    POSITION:4470000
+    POSITION:4480000
+    POSITION:4490000
+    POSITION:4500000
+    POSITION:4510000
+    POSITION:4520000
+    POSITION:4530000
+    POSITION:4540000
+    POSITION:4550000
+    POSITION:4560000
+    POSITION:4570000
+    POSITION:4580000
+    POSITION:4590000
+    POSITION:4600000
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/coverage_distribution.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log" --args distribution_file="results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/0.unique_only_coverage_distribution.tab" plot_file="results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/0.coverage.pdf" deletion_propagation_pr_cutoff=2.32968e-05
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.unsorted.bam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.bam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/best.bam.bai"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/0.coverage.pdf"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/0.unique_only_coverage_distribution.tab"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log"
++++   NOW PROCESSING Identifying junction candidates
+  READ FILE::SRR2584866_1.trim
+  READ FILE::SRR2584866_2.trim
+    ALIGNED READ:10000 CANDIDATE JUNCTIONS:6328
+  READ FILE::SRR2584866_1.unpaired
+  READ FILE::SRR2584866_2.unpaired
+  Passed alignment pairs examined: 58338
+  Taking top candidate junctions...
+  Minimum number to keep:     100 
+  Maximum number to keep:    5000 
+  Maximum length to keep:  460625 bases
+    Initial: Number = 840, Cumulative Length = 257915 bases
+      Testing Pos Hash Score =   50, Num =      1, Length =    300
+      Testing Pos Hash Score =   49, Num =      1, Length =    301
+      Testing Pos Hash Score =   48, Num =      1, Length =    302
+      Testing Pos Hash Score =   47, Num =      1, Length =    302
+      Testing Pos Hash Score =   46, Num =      4, Length =   1207
+      Testing Pos Hash Score =   45, Num =      3, Length =    904
+      Testing Pos Hash Score =   44, Num =      4, Length =   1204
+      Testing Pos Hash Score =   42, Num =      5, Length =   1504
+      Testing Pos Hash Score =   41, Num =      1, Length =    300
+      Testing Pos Hash Score =   40, Num =      5, Length =   1504
+      Testing Pos Hash Score =   39, Num =      5, Length =   1512
+      Testing Pos Hash Score =   38, Num =      5, Length =   1506
+      Testing Pos Hash Score =   37, Num =      5, Length =   1502
+      Testing Pos Hash Score =   36, Num =      1, Length =    301
+      Testing Pos Hash Score =   35, Num =      4, Length =   1258
+      Testing Pos Hash Score =   33, Num =      4, Length =   1231
+      Testing Pos Hash Score =   32, Num =      2, Length =    600
+      Testing Pos Hash Score =   30, Num =      2, Length =    600
+      Testing Pos Hash Score =   29, Num =      2, Length =    600
+      Testing Pos Hash Score =   28, Num =      6, Length =   1804
+      Testing Pos Hash Score =   26, Num =      1, Length =    303
+      Testing Pos Hash Score =   25, Num =      1, Length =    327
+      Testing Pos Hash Score =   23, Num =      3, Length =    907
+      Testing Pos Hash Score =   22, Num =      5, Length =   1582
+      Testing Pos Hash Score =   20, Num =      1, Length =    327
+      Testing Pos Hash Score =   19, Num =      2, Length =    655
+      Testing Pos Hash Score =   18, Num =      2, Length =    602
+      Testing Pos Hash Score =   14, Num =      1, Length =    327
+      Testing Pos Hash Score =   11, Num =      1, Length =    327
+      Testing Pos Hash Score =   10, Num =      1, Length =    327
+      Testing Pos Hash Score =    9, Num =      1, Length =    327
+      Testing Pos Hash Score =    7, Num =      1, Length =    330
+      Testing Pos Hash Score =    6, Num =      1, Length =    309
+      Testing Pos Hash Score =    5, Num =      4, Length =   1235
+      Testing Pos Hash Score =    4, Num =     13, Length =   4042
+      Testing Pos Hash Score =    3, Num =     60, Length =  18605
+      Testing Pos Hash Score =    2, Num =    678, Length = 208036 [Omitted Similar =      2]
+    Accepted: Number = 838, Pos Hash Score >= 2, Cumulative Length = 257310 bases
+[samtools] faidx results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/SRR2584866_1.trim.split.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/SRR2584866_2.trim.split.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/SRR2584866_1.unpaired.split.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/SRR2584866_2.unpaired.split.sam"
++++   NOW PROCESSING Re-alignment to junction candidates
+[system] bowtie2-build -q "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/candidate_junction.fasta" "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/candidate_junction"
+[system] bowtie2 -t --no-unal -p 4 --local  -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/candidate_junction" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_1.trim.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_1.trim.candidate_junction.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:01
+Multiseed full-index search: 00:00:18
+2021043 reads; of these:
+  2021043 (100.00%) were unpaired; of these:
+    1948432 (96.41%) aligned 0 times
+    50204 (2.48%) aligned exactly 1 time
+    22407 (1.11%) aligned >1 times
+3.59% overall alignment rate
+Time searching: 00:00:19
+Overall time: 00:00:19
+[system] bowtie2 -t --no-unal -p 4 --local  -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/candidate_junction" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_2.trim.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_2.trim.candidate_junction.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:20
+2021085 reads; of these:
+  2021085 (100.00%) were unpaired; of these:
+    1951279 (96.55%) aligned 0 times
+    48560 (2.40%) aligned exactly 1 time
+    21246 (1.05%) aligned >1 times
+3.45% overall alignment rate
+Time searching: 00:00:20
+Overall time: 00:00:20
+[system] bowtie2 -t --no-unal -p 4 --local  -L 25 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/candidate_junction" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_1.unpaired.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_1.unpaired.candidate_junction.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:04
+611486 reads; of these:
+  611486 (100.00%) were unpaired; of these:
+    585941 (95.82%) aligned 0 times
+    16315 (2.67%) aligned exactly 1 time
+    9230 (1.51%) aligned >1 times
+4.18% overall alignment rate
+Time searching: 00:00:04
+Overall time: 00:00:04
+[system] bowtie2 -t --no-unal -p 4 --local  -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/candidate_junction" -U "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_2.unpaired.converted.fastq" -S "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_2.unpaired.candidate_junction.sam"
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+123583 reads; of these:
+  123583 (100.00%) were unpaired; of these:
+    118913 (96.22%) aligned 0 times
+    3215 (2.60%) aligned exactly 1 time
+    1455 (1.18%) aligned >1 times
+3.78% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/candidate_junction*"
++++   NOW PROCESSING Resolving best read alignments
+  READ FILE:SRR2584866_1.trim
+    READS:10000
+    READS:20000
+    READS:30000
+    READS:40000
+    READS:50000
+    READS:60000
+    READS:70000
+    READS:80000
+    READS:90000
+    READS:100000
+    READS:110000
+    READS:120000
+    READS:130000
+    READS:140000
+    READS:150000
+    READS:160000
+    READS:170000
+    READS:180000
+    READS:190000
+    READS:200000
+    READS:210000
+    READS:220000
+    READS:230000
+    READS:240000
+    READS:250000
+    READS:260000
+    READS:270000
+    READS:280000
+    READS:290000
+    READS:300000
+    READS:310000
+    READS:320000
+    READS:330000
+    READS:340000
+    READS:350000
+    READS:360000
+    READS:370000
+    READS:380000
+    READS:390000
+    READS:400000
+    READS:410000
+    READS:420000
+    READS:430000
+    READS:440000
+    READS:450000
+    READS:460000
+    READS:470000
+    READS:480000
+    READS:490000
+    READS:500000
+    READS:510000
+    READS:520000
+    READS:530000
+    READS:540000
+    READS:550000
+    READS:560000
+    READS:570000
+    READS:580000
+    READS:590000
+    READS:600000
+    READS:610000
+    READS:620000
+    READS:630000
+    READS:640000
+    READS:650000
+    READS:660000
+    READS:670000
+    READS:680000
+    READS:690000
+    READS:700000
+    READS:710000
+    READS:720000
+    READS:730000
+    READS:740000
+    READS:750000
+    READS:760000
+    READS:770000
+    READS:780000
+    READS:790000
+    READS:800000
+    READS:810000
+    READS:820000
+    READS:830000
+    READS:840000
+    READS:850000
+    READS:860000
+    READS:870000
+    READS:880000
+    READS:890000
+    READS:900000
+    READS:910000
+    READS:920000
+    READS:930000
+    READS:940000
+    READS:950000
+    READS:960000
+    READS:970000
+    READS:980000
+    READS:990000
+    READS:1000000
+    READS:1010000
+    READS:1020000
+    READS:1030000
+    READS:1040000
+    READS:1050000
+    READS:1060000
+    READS:1070000
+    READS:1080000
+    READS:1090000
+    READS:1100000
+    READS:1110000
+    READS:1120000
+    READS:1130000
+    READS:1140000
+    READS:1150000
+    READS:1160000
+    READS:1170000
+    READS:1180000
+    READS:1190000
+    READS:1200000
+    READS:1210000
+    READS:1220000
+    READS:1230000
+    READS:1240000
+    READS:1250000
+    READS:1260000
+    READS:1270000
+    READS:1280000
+    READS:1290000
+    READS:1300000
+    READS:1310000
+    READS:1320000
+    READS:1330000
+    READS:1340000
+    READS:1350000
+    READS:1360000
+    READS:1370000
+    READS:1380000
+    READS:1390000
+    READS:1400000
+    READS:1410000
+    READS:1420000
+    READS:1430000
+    READS:1440000
+    READS:1450000
+    READS:1460000
+    READS:1470000
+    READS:1480000
+    READS:1490000
+    READS:1500000
+    READS:1510000
+    READS:1520000
+    READS:1530000
+    READS:1540000
+    READS:1550000
+    READS:1560000
+    READS:1570000
+    READS:1580000
+    READS:1590000
+    READS:1600000
+    READS:1610000
+    READS:1620000
+    READS:1630000
+    READS:1640000
+    READS:1650000
+    READS:1660000
+    READS:1670000
+    READS:1680000
+    READS:1690000
+    READS:1700000
+    READS:1710000
+    READS:1720000
+    READS:1730000
+    READS:1740000
+    READS:1750000
+    READS:1760000
+    READS:1770000
+    READS:1780000
+    READS:1790000
+    READS:1800000
+    READS:1810000
+    READS:1820000
+    READS:1830000
+    READS:1840000
+    READS:1850000
+    READS:1860000
+    READS:1870000
+    READS:1880000
+    READS:1890000
+    READS:1900000
+    READS:1910000
+    READS:1920000
+    READS:1930000
+    READS:1940000
+    READS:1950000
+    READS:1960000
+    READS:1970000
+    READS:1980000
+    READS:1990000
+    READS:2000000
+    READS:2010000
+    READS:2020000
+  READ FILE:SRR2584866_2.trim
+    READS:2030000
+    READS:2040000
+    READS:2050000
+    READS:2060000
+    READS:2070000
+    READS:2080000
+    READS:2090000
+    READS:2100000
+    READS:2110000
+    READS:2120000
+    READS:2130000
+    READS:2140000
+    READS:2150000
+    READS:2160000
+    READS:2170000
+    READS:2180000
+    READS:2190000
+    READS:2200000
+    READS:2210000
+    READS:2220000
+    READS:2230000
+    READS:2240000
+    READS:2250000
+    READS:2260000
+    READS:2270000
+    READS:2280000
+    READS:2290000
+    READS:2300000
+    READS:2310000
+    READS:2320000
+    READS:2330000
+    READS:2340000
+    READS:2350000
+    READS:2360000
+    READS:2370000
+    READS:2380000
+    READS:2390000
+    READS:2400000
+    READS:2410000
+    READS:2420000
+    READS:2430000
+    READS:2440000
+    READS:2450000
+    READS:2460000
+    READS:2470000
+    READS:2480000
+    READS:2490000
+    READS:2500000
+    READS:2510000
+    READS:2520000
+    READS:2530000
+    READS:2540000
+    READS:2550000
+    READS:2560000
+    READS:2570000
+    READS:2580000
+    READS:2590000
+    READS:2600000
+    READS:2610000
+    READS:2620000
+    READS:2630000
+    READS:2640000
+    READS:2650000
+    READS:2660000
+    READS:2670000
+    READS:2680000
+    READS:2690000
+    READS:2700000
+    READS:2710000
+    READS:2720000
+    READS:2730000
+    READS:2740000
+    READS:2750000
+    READS:2760000
+    READS:2770000
+    READS:2780000
+    READS:2790000
+    READS:2800000
+    READS:2810000
+    READS:2820000
+    READS:2830000
+    READS:2840000
+    READS:2850000
+    READS:2860000
+    READS:2870000
+    READS:2880000
+    READS:2890000
+    READS:2900000
+    READS:2910000
+    READS:2920000
+    READS:2930000
+    READS:2940000
+    READS:2950000
+    READS:2960000
+    READS:2970000
+    READS:2980000
+    READS:2990000
+    READS:3000000
+    READS:3010000
+    READS:3020000
+    READS:3030000
+    READS:3040000
+    READS:3050000
+    READS:3060000
+    READS:3070000
+    READS:3080000
+    READS:3090000
+    READS:3100000
+    READS:3110000
+    READS:3120000
+    READS:3130000
+    READS:3140000
+    READS:3150000
+    READS:3160000
+    READS:3170000
+    READS:3180000
+    READS:3190000
+    READS:3200000
+    READS:3210000
+    READS:3220000
+    READS:3230000
+    READS:3240000
+    READS:3250000
+    READS:3260000
+    READS:3270000
+    READS:3280000
+    READS:3290000
+    READS:3300000
+    READS:3310000
+    READS:3320000
+    READS:3330000
+    READS:3340000
+    READS:3350000
+    READS:3360000
+    READS:3370000
+    READS:3380000
+    READS:3390000
+    READS:3400000
+    READS:3410000
+    READS:3420000
+    READS:3430000
+    READS:3440000
+    READS:3450000
+    READS:3460000
+    READS:3470000
+    READS:3480000
+    READS:3490000
+    READS:3500000
+    READS:3510000
+    READS:3520000
+    READS:3530000
+    READS:3540000
+    READS:3550000
+    READS:3560000
+    READS:3570000
+    READS:3580000
+    READS:3590000
+    READS:3600000
+    READS:3610000
+    READS:3620000
+    READS:3630000
+    READS:3640000
+    READS:3650000
+    READS:3660000
+    READS:3670000
+    READS:3680000
+    READS:3690000
+    READS:3700000
+    READS:3710000
+    READS:3720000
+    READS:3730000
+    READS:3740000
+    READS:3750000
+    READS:3760000
+    READS:3770000
+    READS:3780000
+    READS:3790000
+    READS:3800000
+    READS:3810000
+    READS:3820000
+    READS:3830000
+    READS:3840000
+    READS:3850000
+    READS:3860000
+    READS:3870000
+    READS:3880000
+    READS:3890000
+    READS:3900000
+    READS:3910000
+    READS:3920000
+    READS:3930000
+    READS:3940000
+    READS:3950000
+    READS:3960000
+    READS:3970000
+    READS:3980000
+    READS:3990000
+    READS:4000000
+    READS:4010000
+    READS:4020000
+    READS:4030000
+    READS:4040000
+  READ FILE:SRR2584866_1.unpaired
+    READS:4050000
+    READS:4060000
+    READS:4070000
+    READS:4080000
+    READS:4090000
+    READS:4100000
+    READS:4110000
+    READS:4120000
+    READS:4130000
+    READS:4140000
+    READS:4150000
+    READS:4160000
+    READS:4170000
+    READS:4180000
+    READS:4190000
+    READS:4200000
+    READS:4210000
+    READS:4220000
+    READS:4230000
+    READS:4240000
+    READS:4250000
+    READS:4260000
+    READS:4270000
+    READS:4280000
+    READS:4290000
+    READS:4300000
+    READS:4310000
+    READS:4320000
+    READS:4330000
+    READS:4340000
+    READS:4350000
+    READS:4360000
+    READS:4370000
+    READS:4380000
+    READS:4390000
+    READS:4400000
+    READS:4410000
+    READS:4420000
+    READS:4430000
+    READS:4440000
+    READS:4450000
+    READS:4460000
+    READS:4470000
+    READS:4480000
+    READS:4490000
+    READS:4500000
+    READS:4510000
+    READS:4520000
+    READS:4530000
+    READS:4540000
+    READS:4550000
+    READS:4560000
+    READS:4570000
+    READS:4580000
+    READS:4590000
+    READS:4600000
+    READS:4610000
+    READS:4620000
+    READS:4630000
+    READS:4640000
+    READS:4650000
+  READ FILE:SRR2584866_2.unpaired
+    READS:4660000
+    READS:4670000
+    READS:4680000
+    READS:4690000
+    READS:4700000
+    READS:4710000
+    READS:4720000
+    READS:4730000
+    READS:4740000
+    READS:4750000
+    READS:4760000
+    READS:4770000
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_1.trim.converted.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_2.trim.converted.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_1.unpaired.converted.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/SRR2584866_2.unpaired.converted.fastq"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.trim.reference.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.trim.reference.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_1.unpaired.reference.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/02_reference_alignment/SRR2584866_2.unpaired.reference.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_1.trim.candidate_junction.sam*"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_2.trim.candidate_junction.sam*"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_1.unpaired.candidate_junction.sam*"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/04_candidate_junction_alignment/SRR2584866_2.unpaired.candidate_junction.sam*"
++++   NOW PROCESSING Creating BAM files
+[samtools] import results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/candidate_junction.fasta.fai results/breseq_consensus/SRR2584866_cit_amp_validation/05_alignment_correction/junction.sam results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.unsorted.bam
+[samtools] sort --threads 4 -o results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.bam -T results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.bam results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.unsorted.bam
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.unsorted.bam"
+[samtools] index results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.bam results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.bam.bai
+[samtools] import results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.fasta.fai results/breseq_consensus/SRR2584866_cit_amp_validation/05_alignment_correction/reference.sam results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/reference.unsorted.bam
+[samtools] sort --threads 4 -o results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.bam -T results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.bam results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/reference.unsorted.bam
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/reference.unsorted.bam"
+[samtools] index results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.bam results/breseq_consensus/SRR2584866_cit_amp_validation/data/reference.bam.bai
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/05_alignment_correction/reference.sam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/05_alignment_correction/junction.sam"
++++   NOW PROCESSING Tabulating error counts
+  REFERENCE: CP000819
+  LENGTH: 4606252
+    POSITION:10000
+    POSITION:20000
+    POSITION:30000
+    POSITION:40000
+    POSITION:50000
+    POSITION:60000
+    POSITION:70000
+    POSITION:80000
+    POSITION:90000
+    POSITION:100000
+    POSITION:110000
+    POSITION:120000
+    POSITION:130000
+    POSITION:140000
+    POSITION:150000
+    POSITION:160000
+    POSITION:170000
+    POSITION:180000
+    POSITION:190000
+    POSITION:200000
+    POSITION:210000
+    POSITION:220000
+    POSITION:230000
+    POSITION:240000
+    POSITION:250000
+    POSITION:260000
+    POSITION:270000
+    POSITION:280000
+    POSITION:290000
+    POSITION:300000
+    POSITION:310000
+    POSITION:320000
+    POSITION:330000
+    POSITION:340000
+    POSITION:350000
+    POSITION:360000
+    POSITION:370000
+    POSITION:380000
+    POSITION:390000
+    POSITION:400000
+    POSITION:410000
+    POSITION:420000
+    POSITION:430000
+    POSITION:440000
+    POSITION:450000
+    POSITION:460000
+    POSITION:470000
+    POSITION:480000
+    POSITION:490000
+    POSITION:500000
+    POSITION:510000
+    POSITION:520000
+    POSITION:530000
+    POSITION:540000
+    POSITION:550000
+    POSITION:560000
+    POSITION:570000
+    POSITION:580000
+    POSITION:590000
+    POSITION:600000
+    POSITION:610000
+    POSITION:620000
+    POSITION:630000
+    POSITION:640000
+    POSITION:650000
+    POSITION:660000
+    POSITION:670000
+    POSITION:680000
+    POSITION:690000
+    POSITION:700000
+    POSITION:710000
+    POSITION:720000
+    POSITION:730000
+    POSITION:740000
+    POSITION:750000
+    POSITION:760000
+    POSITION:770000
+    POSITION:780000
+    POSITION:790000
+    POSITION:800000
+    POSITION:810000
+    POSITION:820000
+    POSITION:830000
+    POSITION:840000
+    POSITION:850000
+    POSITION:860000
+    POSITION:870000
+    POSITION:880000
+    POSITION:890000
+    POSITION:900000
+    POSITION:910000
+    POSITION:920000
+    POSITION:930000
+    POSITION:940000
+    POSITION:950000
+    POSITION:960000
+    POSITION:970000
+    POSITION:980000
+    POSITION:990000
+    POSITION:1000000
+    POSITION:1010000
+    POSITION:1020000
+    POSITION:1030000
+    POSITION:1040000
+    POSITION:1050000
+    POSITION:1060000
+    POSITION:1070000
+    POSITION:1080000
+    POSITION:1090000
+    POSITION:1100000
+    POSITION:1110000
+    POSITION:1120000
+    POSITION:1130000
+    POSITION:1140000
+    POSITION:1150000
+    POSITION:1160000
+    POSITION:1170000
+    POSITION:1180000
+    POSITION:1190000
+    POSITION:1200000
+    POSITION:1210000
+    POSITION:1220000
+    POSITION:1230000
+    POSITION:1240000
+    POSITION:1250000
+    POSITION:1260000
+    POSITION:1270000
+    POSITION:1280000
+    POSITION:1290000
+    POSITION:1300000
+    POSITION:1310000
+    POSITION:1320000
+    POSITION:1330000
+    POSITION:1340000
+    POSITION:1350000
+    POSITION:1360000
+    POSITION:1370000
+    POSITION:1380000
+    POSITION:1390000
+    POSITION:1400000
+    POSITION:1410000
+    POSITION:1420000
+    POSITION:1430000
+    POSITION:1440000
+    POSITION:1450000
+    POSITION:1460000
+    POSITION:1470000
+    POSITION:1480000
+    POSITION:1490000
+    POSITION:1500000
+    POSITION:1510000
+    POSITION:1520000
+    POSITION:1530000
+    POSITION:1540000
+    POSITION:1550000
+    POSITION:1560000
+    POSITION:1570000
+    POSITION:1580000
+    POSITION:1590000
+    POSITION:1600000
+    POSITION:1610000
+    POSITION:1620000
+    POSITION:1630000
+    POSITION:1640000
+    POSITION:1650000
+    POSITION:1660000
+    POSITION:1670000
+    POSITION:1680000
+    POSITION:1690000
+    POSITION:1700000
+    POSITION:1710000
+    POSITION:1720000
+    POSITION:1730000
+    POSITION:1740000
+    POSITION:1750000
+    POSITION:1760000
+    POSITION:1770000
+    POSITION:1780000
+    POSITION:1790000
+    POSITION:1800000
+    POSITION:1810000
+    POSITION:1820000
+    POSITION:1830000
+    POSITION:1840000
+    POSITION:1850000
+    POSITION:1860000
+    POSITION:1870000
+    POSITION:1880000
+    POSITION:1890000
+    POSITION:1900000
+    POSITION:1910000
+    POSITION:1920000
+    POSITION:1930000
+    POSITION:1940000
+    POSITION:1950000
+    POSITION:1960000
+    POSITION:1970000
+    POSITION:1980000
+    POSITION:1990000
+    POSITION:2000000
+    POSITION:2010000
+    POSITION:2020000
+    POSITION:2030000
+    POSITION:2040000
+    POSITION:2050000
+    POSITION:2060000
+    POSITION:2070000
+    POSITION:2080000
+    POSITION:2090000
+    POSITION:2100000
+    POSITION:2110000
+    POSITION:2120000
+    POSITION:2130000
+    POSITION:2140000
+    POSITION:2150000
+    POSITION:2160000
+    POSITION:2170000
+    POSITION:2180000
+    POSITION:2190000
+    POSITION:2200000
+    POSITION:2210000
+    POSITION:2220000
+    POSITION:2230000
+    POSITION:2240000
+    POSITION:2250000
+    POSITION:2260000
+    POSITION:2270000
+    POSITION:2280000
+    POSITION:2290000
+    POSITION:2300000
+    POSITION:2310000
+    POSITION:2320000
+    POSITION:2330000
+    POSITION:2340000
+    POSITION:2350000
+    POSITION:2360000
+    POSITION:2370000
+    POSITION:2380000
+    POSITION:2390000
+    POSITION:2400000
+    POSITION:2410000
+    POSITION:2420000
+    POSITION:2430000
+    POSITION:2440000
+    POSITION:2450000
+    POSITION:2460000
+    POSITION:2470000
+    POSITION:2480000
+    POSITION:2490000
+    POSITION:2500000
+    POSITION:2510000
+    POSITION:2520000
+    POSITION:2530000
+    POSITION:2540000
+    POSITION:2550000
+    POSITION:2560000
+    POSITION:2570000
+    POSITION:2580000
+    POSITION:2590000
+    POSITION:2600000
+    POSITION:2610000
+    POSITION:2620000
+    POSITION:2630000
+    POSITION:2640000
+    POSITION:2650000
+    POSITION:2660000
+    POSITION:2670000
+    POSITION:2680000
+    POSITION:2690000
+    POSITION:2700000
+    POSITION:2710000
+    POSITION:2720000
+    POSITION:2730000
+    POSITION:2740000
+    POSITION:2750000
+    POSITION:2760000
+    POSITION:2770000
+    POSITION:2780000
+    POSITION:2790000
+    POSITION:2800000
+    POSITION:2810000
+    POSITION:2820000
+    POSITION:2830000
+    POSITION:2840000
+    POSITION:2850000
+    POSITION:2860000
+    POSITION:2870000
+    POSITION:2880000
+    POSITION:2890000
+    POSITION:2900000
+    POSITION:2910000
+    POSITION:2920000
+    POSITION:2930000
+    POSITION:2940000
+    POSITION:2950000
+    POSITION:2960000
+    POSITION:2970000
+    POSITION:2980000
+    POSITION:2990000
+    POSITION:3000000
+    POSITION:3010000
+    POSITION:3020000
+    POSITION:3030000
+    POSITION:3040000
+    POSITION:3050000
+    POSITION:3060000
+    POSITION:3070000
+    POSITION:3080000
+    POSITION:3090000
+    POSITION:3100000
+    POSITION:3110000
+    POSITION:3120000
+    POSITION:3130000
+    POSITION:3140000
+    POSITION:3150000
+    POSITION:3160000
+    POSITION:3170000
+    POSITION:3180000
+    POSITION:3190000
+    POSITION:3200000
+    POSITION:3210000
+    POSITION:3220000
+    POSITION:3230000
+    POSITION:3240000
+    POSITION:3250000
+    POSITION:3260000
+    POSITION:3270000
+    POSITION:3280000
+    POSITION:3290000
+    POSITION:3300000
+    POSITION:3310000
+    POSITION:3320000
+    POSITION:3330000
+    POSITION:3340000
+    POSITION:3350000
+    POSITION:3360000
+    POSITION:3370000
+    POSITION:3380000
+    POSITION:3390000
+    POSITION:3400000
+    POSITION:3410000
+    POSITION:3420000
+    POSITION:3430000
+    POSITION:3440000
+    POSITION:3450000
+    POSITION:3460000
+    POSITION:3470000
+    POSITION:3480000
+    POSITION:3490000
+    POSITION:3500000
+    POSITION:3510000
+    POSITION:3520000
+    POSITION:3530000
+    POSITION:3540000
+    POSITION:3550000
+    POSITION:3560000
+    POSITION:3570000
+    POSITION:3580000
+    POSITION:3590000
+    POSITION:3600000
+    POSITION:3610000
+    POSITION:3620000
+    POSITION:3630000
+    POSITION:3640000
+    POSITION:3650000
+    POSITION:3660000
+    POSITION:3670000
+    POSITION:3680000
+    POSITION:3690000
+    POSITION:3700000
+    POSITION:3710000
+    POSITION:3720000
+    POSITION:3730000
+    POSITION:3740000
+    POSITION:3750000
+    POSITION:3760000
+    POSITION:3770000
+    POSITION:3780000
+    POSITION:3790000
+    POSITION:3800000
+    POSITION:3810000
+    POSITION:3820000
+    POSITION:3830000
+    POSITION:3840000
+    POSITION:3850000
+    POSITION:3860000
+    POSITION:3870000
+    POSITION:3880000
+    POSITION:3890000
+    POSITION:3900000
+    POSITION:3910000
+    POSITION:3920000
+    POSITION:3930000
+    POSITION:3940000
+    POSITION:3950000
+    POSITION:3960000
+    POSITION:3970000
+    POSITION:3980000
+    POSITION:3990000
+    POSITION:4000000
+    POSITION:4010000
+    POSITION:4020000
+    POSITION:4030000
+    POSITION:4040000
+    POSITION:4050000
+    POSITION:4060000
+    POSITION:4070000
+    POSITION:4080000
+    POSITION:4090000
+    POSITION:4100000
+    POSITION:4110000
+    POSITION:4120000
+    POSITION:4130000
+    POSITION:4140000
+    POSITION:4150000
+    POSITION:4160000
+    POSITION:4170000
+    POSITION:4180000
+    POSITION:4190000
+    POSITION:4200000
+    POSITION:4210000
+    POSITION:4220000
+    POSITION:4230000
+    POSITION:4240000
+    POSITION:4250000
+    POSITION:4260000
+    POSITION:4270000
+    POSITION:4280000
+    POSITION:4290000
+    POSITION:4300000
+    POSITION:4310000
+    POSITION:4320000
+    POSITION:4330000
+    POSITION:4340000
+    POSITION:4350000
+    POSITION:4360000
+    POSITION:4370000
+    POSITION:4380000
+    POSITION:4390000
+    POSITION:4400000
+    POSITION:4410000
+    POSITION:4420000
+    POSITION:4430000
+    POSITION:4440000
+    POSITION:4450000
+    POSITION:4460000
+    POSITION:4470000
+    POSITION:4480000
+    POSITION:4490000
+    POSITION:4500000
+    POSITION:4510000
+    POSITION:4520000
+    POSITION:4530000
+    POSITION:4540000
+    POSITION:4550000
+    POSITION:4560000
+    POSITION:4570000
+    POSITION:4580000
+    POSITION:4590000
+    POSITION:4600000
++++   NOW PROCESSING Re-calibrating base error rates
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/coverage_distribution.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/0.unique_only_coverage_distribution.tab.r.log" --args distribution_file="results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/0.unique_only_coverage_distribution.tab" plot_file="results/breseq_consensus/SRR2584866_cit_amp_validation/output/calibration/0.unique_coverage.pdf" deletion_propagation_pr_cutoff=2.32968e-05
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_1.trim.plot_error_rate.log" --args in_file="results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/base_qual_error_prob.SRR2584866_1.trim.tab" out_file="results/breseq_consensus/SRR2584866_cit_amp_validation/output/calibration/SRR2584866_1.trim.error_rates.pdf" < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_1.trim.plot_error_rate.log"
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_2.trim.plot_error_rate.log" --args in_file="results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/base_qual_error_prob.SRR2584866_2.trim.tab" out_file="results/breseq_consensus/SRR2584866_cit_amp_validation/output/calibration/SRR2584866_2.trim.error_rates.pdf" < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_2.trim.plot_error_rate.log"
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_1.unpaired.plot_error_rate.log" --args in_file="results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/base_qual_error_prob.SRR2584866_1.unpaired.tab" out_file="results/breseq_consensus/SRR2584866_cit_amp_validation/output/calibration/SRR2584866_1.unpaired.error_rates.pdf" < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_1.unpaired.plot_error_rate.log"
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_2.unpaired.plot_error_rate.log" --args in_file="results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/base_qual_error_prob.SRR2584866_2.unpaired.tab" out_file="results/breseq_consensus/SRR2584866_cit_amp_validation/output/calibration/SRR2584866_2.unpaired.error_rates.pdf" < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/plot_error_rate.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/07_error_calibration/SRR2584866_2.unpaired.plot_error_rate.log"
++++   NOW PROCESSING Examining read alignment evidence
+  REFERENCE: CP000819
+  LENGTH: 4606252
+    POSITION:10000
+    POSITION:20000
+    POSITION:30000
+    POSITION:40000
+    POSITION:50000
+    POSITION:60000
+    POSITION:70000
+    POSITION:80000
+    POSITION:90000
+    POSITION:100000
+    POSITION:110000
+    POSITION:120000
+    POSITION:130000
+    POSITION:140000
+    POSITION:150000
+    POSITION:160000
+    POSITION:170000
+    POSITION:180000
+    POSITION:190000
+    POSITION:200000
+    POSITION:210000
+    POSITION:220000
+    POSITION:230000
+    POSITION:240000
+    POSITION:250000
+    POSITION:260000
+    POSITION:270000
+    POSITION:280000
+    POSITION:290000
+    POSITION:300000
+    POSITION:310000
+    POSITION:320000
+    POSITION:330000
+    POSITION:340000
+    POSITION:350000
+    POSITION:360000
+    POSITION:370000
+    POSITION:380000
+    POSITION:390000
+    POSITION:400000
+    POSITION:410000
+    POSITION:420000
+    POSITION:430000
+    POSITION:440000
+    POSITION:450000
+    POSITION:460000
+    POSITION:470000
+    POSITION:480000
+    POSITION:490000
+    POSITION:500000
+    POSITION:510000
+    POSITION:520000
+    POSITION:530000
+    POSITION:540000
+    POSITION:550000
+    POSITION:560000
+    POSITION:570000
+    POSITION:580000
+    POSITION:590000
+    POSITION:600000
+    POSITION:610000
+    POSITION:620000
+    POSITION:630000
+    POSITION:640000
+    POSITION:650000
+    POSITION:660000
+    POSITION:670000
+    POSITION:680000
+    POSITION:690000
+    POSITION:700000
+    POSITION:710000
+    POSITION:720000
+    POSITION:730000
+    POSITION:740000
+    POSITION:750000
+    POSITION:760000
+    POSITION:770000
+    POSITION:780000
+    POSITION:790000
+    POSITION:800000
+    POSITION:810000
+    POSITION:820000
+    POSITION:830000
+    POSITION:840000
+    POSITION:850000
+    POSITION:860000
+    POSITION:870000
+    POSITION:880000
+    POSITION:890000
+    POSITION:900000
+    POSITION:910000
+    POSITION:920000
+    POSITION:930000
+    POSITION:940000
+    POSITION:950000
+    POSITION:960000
+    POSITION:970000
+    POSITION:980000
+    POSITION:990000
+    POSITION:1000000
+    POSITION:1010000
+    POSITION:1020000
+    POSITION:1030000
+    POSITION:1040000
+    POSITION:1050000
+    POSITION:1060000
+    POSITION:1070000
+    POSITION:1080000
+    POSITION:1090000
+    POSITION:1100000
+    POSITION:1110000
+    POSITION:1120000
+    POSITION:1130000
+    POSITION:1140000
+    POSITION:1150000
+    POSITION:1160000
+    POSITION:1170000
+    POSITION:1180000
+    POSITION:1190000
+    POSITION:1200000
+    POSITION:1210000
+    POSITION:1220000
+    POSITION:1230000
+    POSITION:1240000
+    POSITION:1250000
+    POSITION:1260000
+    POSITION:1270000
+    POSITION:1280000
+    POSITION:1290000
+    POSITION:1300000
+    POSITION:1310000
+    POSITION:1320000
+    POSITION:1330000
+    POSITION:1340000
+    POSITION:1350000
+    POSITION:1360000
+    POSITION:1370000
+    POSITION:1380000
+    POSITION:1390000
+    POSITION:1400000
+    POSITION:1410000
+    POSITION:1420000
+    POSITION:1430000
+    POSITION:1440000
+    POSITION:1450000
+    POSITION:1460000
+    POSITION:1470000
+    POSITION:1480000
+    POSITION:1490000
+    POSITION:1500000
+    POSITION:1510000
+    POSITION:1520000
+    POSITION:1530000
+    POSITION:1540000
+    POSITION:1550000
+    POSITION:1560000
+    POSITION:1570000
+    POSITION:1580000
+    POSITION:1590000
+    POSITION:1600000
+    POSITION:1610000
+    POSITION:1620000
+    POSITION:1630000
+    POSITION:1640000
+    POSITION:1650000
+    POSITION:1660000
+    POSITION:1670000
+    POSITION:1680000
+    POSITION:1690000
+    POSITION:1700000
+    POSITION:1710000
+    POSITION:1720000
+    POSITION:1730000
+    POSITION:1740000
+    POSITION:1750000
+    POSITION:1760000
+    POSITION:1770000
+    POSITION:1780000
+    POSITION:1790000
+    POSITION:1800000
+    POSITION:1810000
+    POSITION:1820000
+    POSITION:1830000
+    POSITION:1840000
+    POSITION:1850000
+    POSITION:1860000
+    POSITION:1870000
+    POSITION:1880000
+    POSITION:1890000
+    POSITION:1900000
+    POSITION:1910000
+    POSITION:1920000
+    POSITION:1930000
+    POSITION:1940000
+    POSITION:1950000
+    POSITION:1960000
+    POSITION:1970000
+    POSITION:1980000
+    POSITION:1990000
+    POSITION:2000000
+    POSITION:2010000
+    POSITION:2020000
+    POSITION:2030000
+    POSITION:2040000
+    POSITION:2050000
+    POSITION:2060000
+    POSITION:2070000
+    POSITION:2080000
+    POSITION:2090000
+    POSITION:2100000
+    POSITION:2110000
+    POSITION:2120000
+    POSITION:2130000
+    POSITION:2140000
+    POSITION:2150000
+    POSITION:2160000
+    POSITION:2170000
+    POSITION:2180000
+    POSITION:2190000
+    POSITION:2200000
+    POSITION:2210000
+    POSITION:2220000
+    POSITION:2230000
+    POSITION:2240000
+    POSITION:2250000
+    POSITION:2260000
+    POSITION:2270000
+    POSITION:2280000
+    POSITION:2290000
+    POSITION:2300000
+    POSITION:2310000
+    POSITION:2320000
+    POSITION:2330000
+    POSITION:2340000
+    POSITION:2350000
+    POSITION:2360000
+    POSITION:2370000
+    POSITION:2380000
+    POSITION:2390000
+    POSITION:2400000
+    POSITION:2410000
+    POSITION:2420000
+    POSITION:2430000
+    POSITION:2440000
+    POSITION:2450000
+    POSITION:2460000
+    POSITION:2470000
+    POSITION:2480000
+    POSITION:2490000
+    POSITION:2500000
+    POSITION:2510000
+    POSITION:2520000
+    POSITION:2530000
+    POSITION:2540000
+    POSITION:2550000
+    POSITION:2560000
+    POSITION:2570000
+    POSITION:2580000
+    POSITION:2590000
+    POSITION:2600000
+    POSITION:2610000
+    POSITION:2620000
+    POSITION:2630000
+    POSITION:2640000
+    POSITION:2650000
+    POSITION:2660000
+    POSITION:2670000
+    POSITION:2680000
+    POSITION:2690000
+    POSITION:2700000
+    POSITION:2710000
+    POSITION:2720000
+    POSITION:2730000
+    POSITION:2740000
+    POSITION:2750000
+    POSITION:2760000
+    POSITION:2770000
+    POSITION:2780000
+    POSITION:2790000
+    POSITION:2800000
+    POSITION:2810000
+    POSITION:2820000
+    POSITION:2830000
+    POSITION:2840000
+    POSITION:2850000
+    POSITION:2860000
+    POSITION:2870000
+    POSITION:2880000
+    POSITION:2890000
+    POSITION:2900000
+    POSITION:2910000
+    POSITION:2920000
+    POSITION:2930000
+    POSITION:2940000
+    POSITION:2950000
+    POSITION:2960000
+    POSITION:2970000
+    POSITION:2980000
+    POSITION:2990000
+    POSITION:3000000
+    POSITION:3010000
+    POSITION:3020000
+    POSITION:3030000
+    POSITION:3040000
+    POSITION:3050000
+    POSITION:3060000
+    POSITION:3070000
+    POSITION:3080000
+    POSITION:3090000
+    POSITION:3100000
+    POSITION:3110000
+    POSITION:3120000
+    POSITION:3130000
+    POSITION:3140000
+    POSITION:3150000
+    POSITION:3160000
+    POSITION:3170000
+    POSITION:3180000
+    POSITION:3190000
+    POSITION:3200000
+    POSITION:3210000
+    POSITION:3220000
+    POSITION:3230000
+    POSITION:3240000
+    POSITION:3250000
+    POSITION:3260000
+    POSITION:3270000
+    POSITION:3280000
+    POSITION:3290000
+    POSITION:3300000
+    POSITION:3310000
+    POSITION:3320000
+    POSITION:3330000
+    POSITION:3340000
+    POSITION:3350000
+    POSITION:3360000
+    POSITION:3370000
+    POSITION:3380000
+    POSITION:3390000
+    POSITION:3400000
+    POSITION:3410000
+    POSITION:3420000
+    POSITION:3430000
+    POSITION:3440000
+    POSITION:3450000
+    POSITION:3460000
+    POSITION:3470000
+    POSITION:3480000
+    POSITION:3490000
+    POSITION:3500000
+    POSITION:3510000
+    POSITION:3520000
+    POSITION:3530000
+    POSITION:3540000
+    POSITION:3550000
+    POSITION:3560000
+    POSITION:3570000
+    POSITION:3580000
+    POSITION:3590000
+    POSITION:3600000
+    POSITION:3610000
+    POSITION:3620000
+    POSITION:3630000
+    POSITION:3640000
+    POSITION:3650000
+    POSITION:3660000
+    POSITION:3670000
+    POSITION:3680000
+    POSITION:3690000
+    POSITION:3700000
+    POSITION:3710000
+    POSITION:3720000
+    POSITION:3730000
+    POSITION:3740000
+    POSITION:3750000
+    POSITION:3760000
+    POSITION:3770000
+    POSITION:3780000
+    POSITION:3790000
+    POSITION:3800000
+    POSITION:3810000
+    POSITION:3820000
+    POSITION:3830000
+    POSITION:3840000
+    POSITION:3850000
+    POSITION:3860000
+    POSITION:3870000
+    POSITION:3880000
+    POSITION:3890000
+    POSITION:3900000
+    POSITION:3910000
+    POSITION:3920000
+    POSITION:3930000
+    POSITION:3940000
+    POSITION:3950000
+    POSITION:3960000
+    POSITION:3970000
+    POSITION:3980000
+    POSITION:3990000
+    POSITION:4000000
+    POSITION:4010000
+    POSITION:4020000
+    POSITION:4030000
+    POSITION:4040000
+    POSITION:4050000
+    POSITION:4060000
+    POSITION:4070000
+    POSITION:4080000
+    POSITION:4090000
+    POSITION:4100000
+    POSITION:4110000
+    POSITION:4120000
+    POSITION:4130000
+    POSITION:4140000
+    POSITION:4150000
+    POSITION:4160000
+    POSITION:4170000
+    POSITION:4180000
+    POSITION:4190000
+    POSITION:4200000
+    POSITION:4210000
+    POSITION:4220000
+    POSITION:4230000
+    POSITION:4240000
+    POSITION:4250000
+    POSITION:4260000
+    POSITION:4270000
+    POSITION:4280000
+    POSITION:4290000
+    POSITION:4300000
+    POSITION:4310000
+    POSITION:4320000
+    POSITION:4330000
+    POSITION:4340000
+    POSITION:4350000
+    POSITION:4360000
+    POSITION:4370000
+    POSITION:4380000
+    POSITION:4390000
+    POSITION:4400000
+    POSITION:4410000
+    POSITION:4420000
+    POSITION:4430000
+    POSITION:4440000
+    POSITION:4450000
+    POSITION:4460000
+    POSITION:4470000
+    POSITION:4480000
+    POSITION:4490000
+    POSITION:4500000
+    POSITION:4510000
+    POSITION:4520000
+    POSITION:4530000
+    POSITION:4540000
+    POSITION:4550000
+    POSITION:4560000
+    POSITION:4570000
+    POSITION:4580000
+    POSITION:4590000
+    POSITION:4600000
++++   NOW PROCESSING Polymorphism statistics
+[system] R --vanilla < "/home/reyes/miniconda3/envs/ltee-variant-analysis/bin/../share/breseq/polymorphism_statistics.r" > "results/breseq_consensus/SRR2584866_cit_amp_validation/08_mutation_identification/polymorphism_statistics_output.log" --args total_length=4606252 in_file="results/breseq_consensus/SRR2584866_cit_amp_validation/08_mutation_identification/polymorphism_statistics_input.tab" out_file="results/breseq_consensus/SRR2584866_cit_amp_validation/08_mutation_identification/polymorphism_statistics_output.tab" qual_file="results/breseq_consensus/SRR2584866_cit_amp_validation/08_mutation_identification/error_counts.tab"
++++   NOW PROCESSING Output
++++   NOW PROCESSING Output :: Mutation Prediction
+Creating merged genome diff evidence file...
+Predicting mutations from evidence...
+  Preparing junctions...
+  Predicting mobile element insertions...
+  Predicting large deletions...
+  Predicting small indels and substitutions from junctions...
+  Predicting small indels and substitutions from alignments...
+  Reconciling mutation predictions...
+  Making final adjustments to mutations...
+  Writing final GD file...
+  Writing final VCF file...
++++   NOW PROCESSING Output :: Mutation Annotation
+Annotating mutations...
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/output/evidence/preannotated.gd"
+Drawing coverage plots...
+Creating coverage plot for region: CP000819:1-4606252
+Creating coverage plot for region: CP000819:549270-592556
+Creating coverage plot for region: CP000819:592706-622019
+Creating coverage plot for region: CP000819:1288436-1288968
+Creating coverage plot for region: CP000819:1440373-1441627
+Creating coverage plot for region: CP000819:1465733-1476079
+Creating coverage plot for region: CP000819:1736703-1739145
+Creating coverage plot for region: CP000819:2041747-2065053
+Creating coverage plot for region: CP000819:2095663-2131548
+Creating coverage plot for region: CP000819:2890618-2897106
+Creating coverage plot for region: CP000819:2897269-2923497
+Creating coverage plot for region: CP000819:3029075-3048423
+Creating coverage plot for region: CP000819:3206047-3211881
+Creating coverage plot for region: CP000819:3281441-3282815
+Creating coverage plot for region: CP000819:3566062-3569551
+Creating coverage plot for region: CP000819:3697008-3698367
+Creating coverage plot for region: CP000819:3911069-3912428
+Creating coverage plot for region: CP000819:4028679-4028912
+Creating coverage plot for region: CP000819:4301725-4345669
+Creating coverage plot for region: CP000819:4460728-4462704
+Creating coverage plot for region: CP000819:4540785-4563125
+Creating evidence file: MC_SIDE_1_32.html
+Creating read alignment for region: CP000819:549269-549269
+Creating evidence file: MC_SIDE_2_32.html
+Creating read alignment for region: CP000819:592557-592557
+Creating evidence file: MC_PLOT_32.html
+Creating evidence file: MC_SIDE_1_33.html
+Creating read alignment for region: CP000819:592705-592705
+Creating evidence file: MC_SIDE_2_33.html
+Creating read alignment for region: CP000819:622020-622020
+Creating evidence file: MC_PLOT_33.html
+Creating evidence file: MC_SIDE_1_34.html
+Creating read alignment for region: CP000819:1288435-1288435
+Creating evidence file: MC_SIDE_2_34.html
+Creating read alignment for region: CP000819:1288969-1288969
+Creating evidence file: MC_PLOT_34.html
+Creating evidence file: MC_SIDE_1_35.html
+Creating read alignment for region: CP000819:1440372-1440372
+Creating evidence file: MC_SIDE_2_35.html
+Creating read alignment for region: CP000819:1441628-1441628
+Creating evidence file: MC_PLOT_35.html
+Creating evidence file: MC_SIDE_1_36.html
+Creating read alignment for region: CP000819:1465732-1465732
+Creating evidence file: MC_SIDE_2_36.html
+Creating read alignment for region: CP000819:1476080-1476080
+Creating evidence file: MC_PLOT_36.html
+Creating evidence file: MC_SIDE_1_37.html
+Creating read alignment for region: CP000819:1736702-1736702
+Creating evidence file: MC_SIDE_2_37.html
+Creating read alignment for region: CP000819:1739146-1739146
+Creating evidence file: MC_PLOT_37.html
+Creating evidence file: MC_SIDE_1_38.html
+Creating read alignment for region: CP000819:2041746-2041746
+Creating evidence file: MC_SIDE_2_38.html
+Creating read alignment for region: CP000819:2065054-2065054
+Creating evidence file: MC_PLOT_38.html
+Creating evidence file: MC_SIDE_1_39.html
+Creating read alignment for region: CP000819:2095662-2095662
+Creating evidence file: MC_SIDE_2_39.html
+Creating read alignment for region: CP000819:2131549-2131549
+Creating evidence file: MC_PLOT_39.html
+Creating evidence file: MC_SIDE_1_40.html
+Creating read alignment for region: CP000819:2890617-2890617
+Creating evidence file: MC_SIDE_2_40.html
+Creating read alignment for region: CP000819:2897107-2897107
+Creating evidence file: MC_PLOT_40.html
+Creating evidence file: MC_SIDE_1_41.html
+Creating read alignment for region: CP000819:2897268-2897268
+Creating evidence file: MC_SIDE_2_41.html
+Creating read alignment for region: CP000819:2923498-2923498
+Creating evidence file: MC_PLOT_41.html
+Creating evidence file: MC_SIDE_1_42.html
+Creating read alignment for region: CP000819:3029074-3029074
+Creating evidence file: MC_SIDE_2_42.html
+Creating read alignment for region: CP000819:3048424-3048424
+Creating evidence file: MC_PLOT_42.html
+Creating evidence file: MC_SIDE_1_43.html
+Creating read alignment for region: CP000819:3206046-3206046
+Creating evidence file: MC_SIDE_2_43.html
+Creating read alignment for region: CP000819:3211882-3211882
+Creating evidence file: MC_PLOT_43.html
+Creating evidence file: MC_SIDE_1_44.html
+Creating read alignment for region: CP000819:3281440-3281440
+Creating evidence file: MC_SIDE_2_44.html
+Creating read alignment for region: CP000819:3282816-3282816
+Creating evidence file: MC_PLOT_44.html
+Creating evidence file: MC_SIDE_1_45.html
+Creating read alignment for region: CP000819:3566061-3566061
+Creating evidence file: MC_SIDE_2_45.html
+Creating read alignment for region: CP000819:3569552-3569552
+Creating evidence file: MC_PLOT_45.html
+Creating evidence file: MC_SIDE_1_46.html
+Creating read alignment for region: CP000819:3697007-3697007
+Creating evidence file: MC_SIDE_2_46.html
+Creating read alignment for region: CP000819:3698368-3698368
+Creating evidence file: MC_PLOT_46.html
+Creating evidence file: MC_SIDE_1_47.html
+Creating read alignment for region: CP000819:3911068-3911068
+Creating evidence file: MC_SIDE_2_47.html
+Creating read alignment for region: CP000819:3912429-3912429
+Creating evidence file: MC_PLOT_47.html
+Creating evidence file: MC_SIDE_1_48.html
+Creating read alignment for region: CP000819:4028678-4028678
+Creating evidence file: MC_SIDE_2_48.html
+Creating read alignment for region: CP000819:4028913-4028913
+Creating evidence file: MC_PLOT_48.html
+Creating evidence file: MC_SIDE_1_49.html
+Creating read alignment for region: CP000819:4301724-4301724
+Creating evidence file: MC_SIDE_2_49.html
+Creating read alignment for region: CP000819:4345670-4345670
+Creating evidence file: MC_PLOT_49.html
+Creating evidence file: MC_SIDE_1_50.html
+Creating read alignment for region: CP000819:4460727-4460727
+Creating evidence file: MC_SIDE_2_50.html
+Creating read alignment for region: CP000819:4462705-4462705
+Creating evidence file: MC_PLOT_50.html
+Creating evidence file: MC_SIDE_1_51.html
+Creating read alignment for region: CP000819:4540784-4540784
+Creating evidence file: MC_SIDE_2_51.html
+Creating read alignment for region: CP000819:4563126-4563126
+Creating evidence file: MC_PLOT_51.html
+Creating evidence file: SNP_1.html
+Creating read alignment for region: CP000819:17094.0-17094.0
+Creating evidence file: SNP_2.html
+Creating read alignment for region: CP000819:243331.0-243331.0
+Creating evidence file: SNP_3.html
+Creating read alignment for region: CP000819:1622889.0-1622889.0
+Creating evidence file: RA_6.html
+Creating read alignment for region: CP000819:1128932.1-1128932.1
+Creating evidence file: RA_8.html
+Creating read alignment for region: CP000819:1445261.0-1445261.0
+Creating evidence file: RA_9.html
+Creating read alignment for region: CP000819:1445264.0-1445264.0
+Creating evidence file: RA_10.html
+Creating read alignment for region: CP000819:1445267.0-1445267.0
+Creating evidence file: RA_12.html
+Creating read alignment for region: CP000819:1616132.0-1616132.0
+Creating evidence file: RA_14.html
+Creating read alignment for region: CP000819:2204380.1-2204380.1
+Creating evidence file: RA_15.html
+Creating read alignment for region: CP000819:3535439.0-3535439.0
+Creating evidence file: RA_16.html
+Creating read alignment for region: CP000819:3539640.0-3539640.0
+Creating evidence file: RA_17.html
+Creating read alignment for region: CP000819:3554979.0-3554979.0
+Creating evidence file: RA_18.html
+Creating read alignment for region: CP000819:3562493.0-3562493.0
+Creating evidence file: RA_19.html
+Creating read alignment for region: CP000819:3563299.0-3563299.0
+Creating evidence file: RA_22.html
+Creating read alignment for region: CP000819:3573526.0-3573526.0
+Creating evidence file: RA_23.html
+Creating read alignment for region: CP000819:3583147.0-3583147.0
+Creating evidence file: RA_24.html
+Creating read alignment for region: CP000819:3583773.0-3583773.0
+Creating evidence file: RA_25.html
+Creating read alignment for region: CP000819:3597415.0-3597415.0
+Creating evidence file: RA_26.html
+Creating read alignment for region: CP000819:3614151.1-3614151.1
+Creating evidence file: RA_27.html
+Creating read alignment for region: CP000819:3622071.0-3622071.0
+Creating evidence file: RA_28.html
+Creating read alignment for region: CP000819:3627313.0-3627313.0
+Creating evidence file: RA_29.html
+Creating read alignment for region: CP000819:3640294.1-3640294.1
+Creating evidence file: RA_30.html
+Creating read alignment for region: CP000819:3640294.2-3640294.2
+Creating evidence file: JC_52.html
+Creating read alignment for region: CP000819__1__1__CP000819__4606252__-1__0____150__150__0__0:150-151
+Creating evidence file: JC_SIDE_1_52.html
+Creating read alignment for region: CP000819:1-1
+Creating evidence file: JC_SIDE_2_52.html
+Creating read alignment for region: CP000819:4606252-4606252
+Creating evidence file: JC_53.html
+Creating read alignment for region: CP000819__253__-1__CP000819__288__-1__10____150__150__0__0:150-161
+Creating evidence file: JC_SIDE_1_53.html
+Creating read alignment for region: CP000819:253-253
+Creating evidence file: JC_SIDE_2_53.html
+Creating read alignment for region: CP000819:278-278
+Creating evidence file: JC_55.html
+Creating read alignment for region: CP000819__16519__1__CP000819__16525__-1__4____150__150__1__1:150-155
+Creating evidence file: JC_SIDE_1_55.html
+Creating read alignment for region: CP000819:16519-16519
+Creating evidence file: JC_SIDE_2_55.html
+Creating read alignment for region: CP000819:16521-16521
+Creating evidence file: JC_66.html
+Creating read alignment for region: CP000819__229739__1__CP000819__229751__1__9____150__150__1__1:150-160
+Creating evidence file: JC_SIDE_1_66.html
+Creating read alignment for region: CP000819:229739-229739
+Creating evidence file: JC_SIDE_2_66.html
+Creating read alignment for region: CP000819:229760-229760
+Creating evidence file: JC_87.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__2095662__-1__0____150__150__0__0:150-151
+Creating evidence file: JC_SIDE_1_87.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_87.html
+Creating read alignment for region: CP000819:2095662-2095662
+Creating evidence file: JC_88.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__2667640__-1__27____150__150__0__0:150-178
+Creating evidence file: JC_SIDE_1_88.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_88.html
+Creating read alignment for region: CP000819:2667613-2667613
+Creating evidence file: JC_89.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__3029075__-1__1____150__150__0__0:150-152
+Creating evidence file: JC_SIDE_1_89.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_89.html
+Creating read alignment for region: CP000819:3029074-3029074
+Creating evidence file: JC_90.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__3698341__1__27____150__150__0__0:150-178
+Creating evidence file: JC_SIDE_1_90.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_90.html
+Creating read alignment for region: CP000819:3698368-3698368
+Creating evidence file: JC_91.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__3912429__1__0____150__150__0__0:150-151
+Creating evidence file: JC_SIDE_1_91.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_91.html
+Creating read alignment for region: CP000819:3912429-3912429
+Creating evidence file: JC_92.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__4121236__-1__27____150__150__0__0:150-178
+Creating evidence file: JC_SIDE_1_92.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_92.html
+Creating read alignment for region: CP000819:4121209-4121209
+Creating evidence file: JC_93.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__4345670__1__0____150__150__0__0:150-151
+Creating evidence file: JC_SIDE_1_93.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_93.html
+Creating read alignment for region: CP000819:4345670-4345670
+Creating evidence file: JC_94.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__4563126__1__0____150__150__0__0:150-151
+Creating evidence file: JC_SIDE_1_94.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_94.html
+Creating read alignment for region: CP000819:4563126-4563126
+Creating evidence file: JC_95.html
+Creating read alignment for region: CP000819__592702__-1__CP000819__4589433__1__27____150__150__0__0:150-178
+Creating evidence file: JC_SIDE_1_95.html
+Creating read alignment for region: CP000819:592702-592702
+Creating evidence file: JC_SIDE_2_95.html
+Creating read alignment for region: CP000819:4589460-4589460
+Creating evidence file: JC_96.html
+Creating read alignment for region: CP000819__592703__-1__CP000819__1736703__-1__1____150__150__0__0:150-152
+Creating evidence file: JC_SIDE_1_96.html
+Creating read alignment for region: CP000819:592703-592703
+Creating evidence file: JC_SIDE_2_96.html
+Creating read alignment for region: CP000819:1736702-1736702
+Creating evidence file: JC_97.html
+Creating read alignment for region: CP000819__592703__-1__CP000819__1784113__-1__28____150__150__0__0:150-179
+Creating evidence file: JC_SIDE_1_97.html
+Creating read alignment for region: CP000819:592703-592703
+Creating evidence file: JC_SIDE_2_97.html
+Creating read alignment for region: CP000819:1784085-1784085
+Creating evidence file: JC_98.html
+Creating read alignment for region: CP000819__592703__-1__CP000819__3211881__1__1____150__150__0__0:150-152
+Creating evidence file: JC_SIDE_1_98.html
+Creating read alignment for region: CP000819:592703-592703
+Creating evidence file: JC_SIDE_2_98.html
+Creating read alignment for region: CP000819:3211882-3211882
+Creating evidence file: JC_99.html
+Creating read alignment for region: CP000819__592703__-1__CP000819__3282788__1__28____150__150__0__0:150-179
+Creating evidence file: JC_SIDE_1_99.html
+Creating read alignment for region: CP000819:592703-592703
+Creating evidence file: JC_SIDE_2_99.html
+Creating read alignment for region: CP000819:3282816-3282816
+Creating evidence file: JC_100.html
+Creating read alignment for region: CP000819__592703__-1__CP000819__4428181__-1__28____150__150__0__0:150-179
+Creating evidence file: JC_SIDE_1_100.html
+Creating read alignment for region: CP000819:592703-592703
+Creating evidence file: JC_SIDE_2_100.html
+Creating read alignment for region: CP000819:4428153-4428153
+Creating evidence file: JC_101.html
+Creating read alignment for region: CP000819__592703__-1__CP000819__4460728__-1__1____150__150__0__0:150-152
+Creating evidence file: JC_SIDE_1_101.html
+Creating read alignment for region: CP000819:592703-592703
+Creating evidence file: JC_SIDE_2_101.html
+Creating read alignment for region: CP000819:4460727-4460727
+Creating evidence file: JC_103.html
+Creating read alignment for region: CP000819__592704__-1__CP000819__1288437__-1__2____150__150__0__0:150-153
+Creating evidence file: JC_SIDE_1_103.html
+Creating read alignment for region: CP000819:592704-592704
+Creating evidence file: JC_SIDE_2_103.html
+Creating read alignment for region: CP000819:1288435-1288435
+Creating evidence file: JC_104.html
+Creating read alignment for region: CP000819__592705__-1__CP000819__2923494__1__4____150__150__0__0:150-155
+Creating evidence file: JC_SIDE_1_104.html
+Creating read alignment for region: CP000819:592705-592705
+Creating evidence file: JC_SIDE_2_104.html
+Creating read alignment for region: CP000819:2923498-2923498
+Creating evidence file: JC_106.html
+Creating read alignment for region: CP000819__657327__1__CP000819__4301724__-1__0____150__150__1__0:150-151
+Creating evidence file: JC_SIDE_1_106.html
+Creating read alignment for region: CP000819:657327-657327
+Creating evidence file: JC_SIDE_2_106.html
+Creating read alignment for region: CP000819:4301724-4301724
+Creating evidence file: JC_127.html
+Creating read alignment for region: CP000819__1170755__1__CP000819__1288967__1__2____150__150__1__0:150-153
+Creating evidence file: JC_SIDE_1_127.html
+Creating read alignment for region: CP000819:1170755-1170755
+Creating evidence file: JC_SIDE_2_127.html
+Creating read alignment for region: CP000819:1288969-1288969
+Creating evidence file: JC_140.html
+Creating read alignment for region: CP000819__1440373__-1__CP000819__1441627__-1__1____150__150__0__1:150-152
+Creating evidence file: JC_SIDE_1_140.html
+Creating read alignment for region: CP000819:1440372-1440372
+Creating evidence file: JC_SIDE_2_140.html
+Creating read alignment for region: CP000819:1441627-1441627
+Creating evidence file: JC_141.html
+Creating read alignment for region: CP000819__1441627__1__CP000819__2897269__-1__2____150__150__0__0:150-153
+Creating evidence file: JC_SIDE_1_141.html
+Creating read alignment for region: CP000819:1441628-1441628
+Creating evidence file: JC_SIDE_2_141.html
+Creating read alignment for region: CP000819:2897268-2897268
+Creating evidence file: JC_143.html
+Creating read alignment for region: CP000819__1465732__-1__CP000819__1784111__1__-1__G__150__150__0__1:150-152
+Creating evidence file: JC_SIDE_1_143.html
+Creating read alignment for region: CP000819:1465732-1465732
+Creating evidence file: JC_SIDE_2_143.html
+Creating read alignment for region: CP000819:1784111-1784111
+Creating evidence file: JC_144.html
+Creating read alignment for region: CP000819__1476078__1__CP000819__1627576__-1__2____150__150__0__1:150-153
+Creating evidence file: JC_SIDE_1_144.html
+Creating read alignment for region: CP000819:1476080-1476080
+Creating evidence file: JC_SIDE_2_144.html
+Creating read alignment for region: CP000819:1627576-1627576
+Creating evidence file: JC_151.html
+Creating read alignment for region: CP000819__1739144__1__CP000819__1785555__-1__2____150__150__0__1:150-153
+Creating evidence file: JC_SIDE_1_151.html
+Creating read alignment for region: CP000819:1739146-1739146
+Creating evidence file: JC_SIDE_2_151.html
+Creating read alignment for region: CP000819:1785555-1785555
+Creating evidence file: JC_160.html
+Creating read alignment for region: CP000819__2131549__1__CP000819__2669082__-1__0____150__150__0__1:150-151
+Creating evidence file: JC_SIDE_1_160.html
+Creating read alignment for region: CP000819:2131549-2131549
+Creating evidence file: JC_SIDE_2_160.html
+Creating read alignment for region: CP000819:2669082-2669082
+Creating evidence file: JC_164.html
+Creating read alignment for region: CP000819__2236143__1__CP000819__2236171__1__8____150__150__0__0:150-159
+Creating evidence file: JC_SIDE_1_164.html
+Creating read alignment for region: CP000819:2236143-2236143
+Creating evidence file: JC_SIDE_2_164.html
+Creating read alignment for region: CP000819:2236179-2236179
+Creating evidence file: JC_184.html
+Creating read alignment for region: CP000819__2639216__-1__CP000819__2639278__-1__9____150__150__0__0:150-160
+Creating evidence file: JC_SIDE_1_184.html
+Creating read alignment for region: CP000819:2639216-2639216
+Creating evidence file: JC_SIDE_2_184.html
+Creating read alignment for region: CP000819:2639269-2639269
+Creating evidence file: JC_186.html
+Creating read alignment for region: CP000819__2653353__1__CP000819__2653372__1__9____150__150__0__0:150-160
+Creating evidence file: JC_SIDE_1_186.html
+Creating read alignment for region: CP000819:2653353-2653353
+Creating evidence file: JC_SIDE_2_186.html
+Creating read alignment for region: CP000819:2653381-2653381
+Creating evidence file: JC_187.html
+Creating read alignment for region: CP000819__2669082__-1__CP000819__2890617__-1__0____150__150__1__0:150-151
+Creating evidence file: JC_SIDE_1_187.html
+Creating read alignment for region: CP000819:2669082-2669082
+Creating evidence file: JC_SIDE_2_187.html
+Creating read alignment for region: CP000819:2890617-2890617
+Creating evidence file: JC_191.html
+Creating read alignment for region: CP000819__2789176__-1__CP000819__3048422__1__2____150__150__1__0:150-153
+Creating evidence file: JC_SIDE_1_191.html
+Creating read alignment for region: CP000819:2789176-2789176
+Creating evidence file: JC_SIDE_2_191.html
+Creating read alignment for region: CP000819:3048424-3048424
+Creating evidence file: JC_192.html
+Creating read alignment for region: CP000819__2789176__-1__CP000819__3206046__-1__0____150__150__1__0:150-151
+Creating evidence file: JC_SIDE_1_192.html
+Creating read alignment for region: CP000819:2789176-2789176
+Creating evidence file: JC_SIDE_2_192.html
+Creating read alignment for region: CP000819:3206046-3206046
+Creating evidence file: JC_211.html
+Creating read alignment for region: CP000819__3324500__1__CP000819__3324521__1__9____150__150__0__0:150-160
+Creating evidence file: JC_SIDE_1_211.html
+Creating read alignment for region: CP000819:3324500-3324500
+Creating evidence file: JC_SIDE_2_211.html
+Creating read alignment for region: CP000819:3324530-3324530
+Creating evidence file: JC_221.html
+Creating read alignment for region: CP000819__3532081__1__CP000819__3641564__-1__3____150__150__1__0:150-154
+Creating evidence file: JC_SIDE_1_221.html
+Creating read alignment for region: CP000819:3532081-3532081
+Creating evidence file: JC_SIDE_2_221.html
+Creating read alignment for region: CP000819:3641561-3641561
+Creating evidence file: JC_232.html
+Creating read alignment for region: CP000819__3566673__1__CP000819__3566696__1__9____150__150__1__0:150-160
+Creating evidence file: JC_SIDE_1_232.html
+Creating read alignment for region: CP000819:3566682-3566682
+Creating evidence file: JC_SIDE_2_232.html
+Creating read alignment for region: CP000819:3566696-3566696
+Creating evidence file: JC_249.html
+Creating read alignment for region: CP000819__3835536__1__CP000819__3835572__1__13____150__150__0__0:150-164
+Creating evidence file: JC_SIDE_1_249.html
+Creating read alignment for region: CP000819:3835536-3835536
+Creating evidence file: JC_SIDE_2_249.html
+Creating read alignment for region: CP000819:3835585-3835585
+Creating evidence file: JC_252.html
+Creating read alignment for region: CP000819__3905189__1__CP000819__3905216__1__12____150__150__0__0:150-163
+Creating evidence file: JC_SIDE_1_252.html
+Creating read alignment for region: CP000819:3905189-3905189
+Creating evidence file: JC_SIDE_2_252.html
+Creating read alignment for region: CP000819:3905228-3905228
+Creating evidence file: JC_269.html
+Creating read alignment for region: CP000819__4399770__1__CP000819__4399816__1__15____150__150__0__0:150-166
+Creating evidence file: JC_SIDE_1_269.html
+Creating read alignment for region: CP000819:4399770-4399770
+Creating evidence file: JC_SIDE_2_269.html
+Creating read alignment for region: CP000819:4399831-4399831
+Creating evidence file: JC_273.html
+Creating read alignment for region: CP000819__4429623__-1__CP000819__4462705__1__0____150__150__1__0:150-151
+Creating evidence file: JC_SIDE_1_273.html
+Creating read alignment for region: CP000819:4429623-4429623
+Creating evidence file: JC_SIDE_2_273.html
+Creating read alignment for region: CP000819:4462705-4462705
+Creating evidence file: JC_275.html
+Creating read alignment for region: CP000819__4540784__-1__CP000819__4587991__1__0____150__150__0__1:150-151
+Creating evidence file: JC_SIDE_1_275.html
+Creating read alignment for region: CP000819:4540784-4540784
+Creating evidence file: JC_SIDE_2_275.html
+Creating read alignment for region: CP000819:4587991-4587991
+Creating index HTML table...
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/01_sequence_conversion/*.trims"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/candidate_junction.fasta"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/03_candidate_junctions/candidate_junction.fasta.fai"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/05_alignment_correction/jc_evidence.gd"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.bam"
+[system] rm -f "results/breseq_consensus/SRR2584866_cit_amp_validation/06_bam/junction.bam.bai"
++++   SUCCESSFULLY COMPLETED

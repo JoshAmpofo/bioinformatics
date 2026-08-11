@@ -1,0 +1,228 @@
+==============================================
+LTEE Ara-3 variant annotation
+Started: Tue Aug 11 07:41:01 AM GMT 2026
+==============================================
+
+==============================================
+Sample:     Ara3_5000
+Generation: 5000
+Run:        SRR2589044
+==============================================
+Annotating variants...
+00:00:00 SnpEff version SnpEff 5.4c (build 2026-02-23 07:25), by Pablo Cingolani
+00:00:00 Command: 'ann'
+00:00:00 Reading configuration file 'snpeff/snpEff.config'. Genome: 'REL606'
+00:00:00 Looking for config file: '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/snpEff.config'
+00:00:00 Reading config file: /home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/snpEff.config
+00:00:00 Codon table 'Bacterial_and_Plant_Plastid' assigned to chromosome 'CP000819.1'
+00:00:00 done
+00:00:00 Reading database for genome version 'REL606' from file '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/./data/REL606/snpEffectPredictor.bin' (this might take a while)
+00:00:00 done
+00:00:00 Loading Motifs and PWMs
+00:00:00 Building interval forest
+00:00:01 done.
+00:00:01 Genome stats :
+#-----------------------------------------------
+# Genome name                : 'Escherichia_coli_B_REL606'
+# Genome version             : 'REL606'
+# Genome ID                  : 'REL606[0]'
+# Has protein coding info    : true
+# Has Tr. Support Level info : true
+# Genes                      : 4383
+# Protein coding genes       : 4209
+#-----------------------------------------------
+# Transcripts                : 4209
+# Avg. transcripts per gene  : 0.96
+# TSL transcripts            : 0
+#-----------------------------------------------
+# Checked transcripts        : 
+#               AA sequences :   4209 ( 100.00% )
+#              DNA sequences :      0 ( 0.00% )
+#-----------------------------------------------
+# Protein coding transcripts : 4209
+#              Length errors :      0 ( 0.00% )
+#  STOP codons in CDS errors :      0 ( 0.00% )
+#         START codon errors :      0 ( 0.00% )
+#        STOP codon warnings :      0 ( 0.00% )
+#              UTR sequences :      0 ( 0.00% )
+#               Total Errors :      0 ( 0.00% )
+# WARNING                    : No protein coding transcript has UTR
+#-----------------------------------------------
+# Cds                        : 4210
+# Exons                      : 4210
+# Exons with sequence        : 4210
+# Exons without sequence     : 0
+# Avg. exons per transcript  : 1.00
+#-----------------------------------------------
+# Number of chromosomes      : 1
+# Chromosomes                : Format 'chromo_name size codon_table'
+#		'CP000819.1'	4629812	Bacterial_and_Plant_Plastid
+#-----------------------------------------------
+
+00:00:01 Predicting variants
+00:00:01 Loading sequences for chromosome 'CP000819.1' from file '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/./data/REL606/sequence.CP000819.1.bin'
+00:00:01 Building sequence tree for chromosome 'CP000819.1'
+00:00:01 Done. Loaded 3620 sequences.
+
+WARNINGS: Some warning were detected
+Warning type	Number of warnings
+INFO_REALIGN_3_PRIME	1
+
+
+00:00:01 Creating summary file: results/statistics/annotation/SRR2589044.snpeff_stats.csv
+00:00:01 Creating summary file: results/statistics/annotation/SRR2589044.snpeff_summary.html
+00:00:01 Creating genes file: results/statistics/annotation/SRR2589044.snpeff_stats.genes.txt
+00:00:01 done.
+00:00:01 Done.
+[OK] Annotated SRR2589044
+
+==============================================
+Sample:     Ara3_15000
+Generation: 15000
+Run:        SRR2584863
+==============================================
+Annotating variants...
+00:00:00 SnpEff version SnpEff 5.4c (build 2026-02-23 07:25), by Pablo Cingolani
+00:00:00 Command: 'ann'
+00:00:00 Reading configuration file 'snpeff/snpEff.config'. Genome: 'REL606'
+00:00:00 Looking for config file: '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/snpEff.config'
+00:00:00 Reading config file: /home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/snpEff.config
+00:00:00 Codon table 'Bacterial_and_Plant_Plastid' assigned to chromosome 'CP000819.1'
+00:00:00 done
+00:00:00 Reading database for genome version 'REL606' from file '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/./data/REL606/snpEffectPredictor.bin' (this might take a while)
+00:00:00 done
+00:00:00 Loading Motifs and PWMs
+00:00:00 Building interval forest
+00:00:01 done.
+00:00:01 Genome stats :
+#-----------------------------------------------
+# Genome name                : 'Escherichia_coli_B_REL606'
+# Genome version             : 'REL606'
+# Genome ID                  : 'REL606[0]'
+# Has protein coding info    : true
+# Has Tr. Support Level info : true
+# Genes                      : 4383
+# Protein coding genes       : 4209
+#-----------------------------------------------
+# Transcripts                : 4209
+# Avg. transcripts per gene  : 0.96
+# TSL transcripts            : 0
+#-----------------------------------------------
+# Checked transcripts        : 
+#               AA sequences :   4209 ( 100.00% )
+#              DNA sequences :      0 ( 0.00% )
+#-----------------------------------------------
+# Protein coding transcripts : 4209
+#              Length errors :      0 ( 0.00% )
+#  STOP codons in CDS errors :      0 ( 0.00% )
+#         START codon errors :      0 ( 0.00% )
+#        STOP codon warnings :      0 ( 0.00% )
+#              UTR sequences :      0 ( 0.00% )
+#               Total Errors :      0 ( 0.00% )
+# WARNING                    : No protein coding transcript has UTR
+#-----------------------------------------------
+# Cds                        : 4210
+# Exons                      : 4210
+# Exons with sequence        : 4210
+# Exons without sequence     : 0
+# Avg. exons per transcript  : 1.00
+#-----------------------------------------------
+# Number of chromosomes      : 1
+# Chromosomes                : Format 'chromo_name size codon_table'
+#		'CP000819.1'	4629812	Bacterial_and_Plant_Plastid
+#-----------------------------------------------
+
+00:00:01 Predicting variants
+00:00:01 Loading sequences for chromosome 'CP000819.1' from file '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/./data/REL606/sequence.CP000819.1.bin'
+00:00:01 Building sequence tree for chromosome 'CP000819.1'
+00:00:01 Done. Loaded 3620 sequences.
+
+WARNINGS: Some warning were detected
+Warning type	Number of warnings
+INFO_REALIGN_3_PRIME	1
+
+
+00:00:01 Creating summary file: results/statistics/annotation/SRR2584863.snpeff_stats.csv
+00:00:01 Creating summary file: results/statistics/annotation/SRR2584863.snpeff_summary.html
+00:00:01 Creating genes file: results/statistics/annotation/SRR2584863.snpeff_stats.genes.txt
+00:00:01 done.
+00:00:01 Done.
+[OK] Annotated SRR2584863
+
+==============================================
+Sample:     Ara3_50000
+Generation: 50000
+Run:        SRR2584866
+==============================================
+Annotating variants...
+00:00:00 SnpEff version SnpEff 5.4c (build 2026-02-23 07:25), by Pablo Cingolani
+00:00:00 Command: 'ann'
+00:00:00 Reading configuration file 'snpeff/snpEff.config'. Genome: 'REL606'
+00:00:00 Looking for config file: '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/snpEff.config'
+00:00:00 Reading config file: /home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/snpEff.config
+00:00:00 Codon table 'Bacterial_and_Plant_Plastid' assigned to chromosome 'CP000819.1'
+00:00:00 done
+00:00:00 Reading database for genome version 'REL606' from file '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/./data/REL606/snpEffectPredictor.bin' (this might take a while)
+00:00:00 done
+00:00:00 Loading Motifs and PWMs
+00:00:00 Building interval forest
+00:00:01 done.
+00:00:01 Genome stats :
+#-----------------------------------------------
+# Genome name                : 'Escherichia_coli_B_REL606'
+# Genome version             : 'REL606'
+# Genome ID                  : 'REL606[0]'
+# Has protein coding info    : true
+# Has Tr. Support Level info : true
+# Genes                      : 4383
+# Protein coding genes       : 4209
+#-----------------------------------------------
+# Transcripts                : 4209
+# Avg. transcripts per gene  : 0.96
+# TSL transcripts            : 0
+#-----------------------------------------------
+# Checked transcripts        : 
+#               AA sequences :   4209 ( 100.00% )
+#              DNA sequences :      0 ( 0.00% )
+#-----------------------------------------------
+# Protein coding transcripts : 4209
+#              Length errors :      0 ( 0.00% )
+#  STOP codons in CDS errors :      0 ( 0.00% )
+#         START codon errors :      0 ( 0.00% )
+#        STOP codon warnings :      0 ( 0.00% )
+#              UTR sequences :      0 ( 0.00% )
+#               Total Errors :      0 ( 0.00% )
+# WARNING                    : No protein coding transcript has UTR
+#-----------------------------------------------
+# Cds                        : 4210
+# Exons                      : 4210
+# Exons with sequence        : 4210
+# Exons without sequence     : 0
+# Avg. exons per transcript  : 1.00
+#-----------------------------------------------
+# Number of chromosomes      : 1
+# Chromosomes                : Format 'chromo_name size codon_table'
+#		'CP000819.1'	4629812	Bacterial_and_Plant_Plastid
+#-----------------------------------------------
+
+00:00:01 Predicting variants
+00:00:01 Loading sequences for chromosome 'CP000819.1' from file '/home/reyes/bioinformatics/LTEE_variant_analysis/snpeff/./data/REL606/sequence.CP000819.1.bin'
+00:00:01 Building sequence tree for chromosome 'CP000819.1'
+00:00:01 Done. Loaded 3620 sequences.
+
+WARNINGS: Some warning were detected
+Warning type	Number of warnings
+INFO_REALIGN_3_PRIME	31
+
+
+00:00:01 Creating summary file: results/statistics/annotation/SRR2584866.snpeff_stats.csv
+00:00:02 Creating summary file: results/statistics/annotation/SRR2584866.snpeff_summary.html
+00:00:02 Creating genes file: results/statistics/annotation/SRR2584866.snpeff_stats.genes.txt
+00:00:02 done.
+00:00:02 Done.
+[OK] Annotated SRR2584866
+
+==============================================
+Annotation complete
+Finished: Tue Aug 11 07:41:08 AM GMT 2026
+==============================================

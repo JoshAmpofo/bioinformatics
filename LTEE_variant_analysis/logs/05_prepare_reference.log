@@ -1,0 +1,48 @@
+==============================================
+Preparing E. coli REL606 reference genome
+Started: Tue Aug 11 01:33:19 AM GMT 2026
+==============================================
+[DOWNLOAD] REL606 reference genome
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0  4  1.31M   4  55601   0      0  26872      0   00:51   00:02   00:49  46968 10  1.31M  10 140.2k   0      0  42950      0   00:32   00:03   00:29  58419 19  1.31M  19 265.2k   0      0  59398      0   00:23   00:04   00:19  73659 61  1.31M  61 819.9k   0      0 138.7k      0   00:09   00:05   00:04 163.1k100  1.31M 100  1.31M   0      0 216.8k      0   00:06   00:06         163.1k100  1.31M 100  1.31M   0      0 216.8k      0   00:06   00:06         163.1k100  1.31M 100  1.31M   0      0 216.8k      0   00:06   00:06         163.1k
+
+Testing gzip integrity...
+[OK] Reference archive passed gzip check.
+
+Uncompressing reference...
+
+Reference sequence header:
+>CP000819.1 Escherichia coli B str. REL606, complete genome
+
+Calculating reference statistics...
+file                               format  type  num_seqs    sum_len    min_len    avg_len    max_len
+data/reference/ecoli_rel606.fasta  FASTA   DNA          1  4,629,812  4,629,812  4,629,812  4,629,812
+
+Building BWA index...
+[bwa_index] Pack FASTA... 0.04 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 1.11 seconds elapse.
+[bwa_index] Update BWT... 0.02 sec
+[bwa_index] Pack forward-only FASTA... 0.02 sec
+[bwa_index] Construct SA from BWT and Occ... 0.41 sec
+[main] Version: 0.7.19-r1273
+[main] CMD: bwa index data/reference/ecoli_rel606.fasta
+[main] Real time: 1.713 sec; CPU: 1.598 sec
+
+Building samtools FASTA index...
+
+Reference directory:
+total 13M
+-rw-rw-r-- 1 reyes reyes 4.5M Aug 11 01:33 ecoli_rel606.fasta
+-rw-rw-r-- 1 reyes reyes   12 Aug 11 01:33 ecoli_rel606.fasta.amb
+-rw-rw-r-- 1 reyes reyes   86 Aug 11 01:33 ecoli_rel606.fasta.ann
+-rw-rw-r-- 1 reyes reyes 4.5M Aug 11 01:33 ecoli_rel606.fasta.bwt
+-rw-rw-r-- 1 reyes reyes   28 Aug 11 01:33 ecoli_rel606.fasta.fai
+-rw-rw-r-- 1 reyes reyes 1.2M Aug 11 01:33 ecoli_rel606.fasta.pac
+-rw-rw-r-- 1 reyes reyes 2.3M Aug 11 01:33 ecoli_rel606.fasta.sa
+
+==============================================
+Reference preparation complete
+Finished: Tue Aug 11 01:33:27 AM GMT 2026
+==============================================

@@ -1,0 +1,26 @@
+Processing SRR2589044...
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+Processing SRR2584863...
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+Processing SRR2584866...
+[W::bcf_hdr_check_sanity] MQ should be declared as Type=Float
+
+sample      generation  run         substitution  count
+Ara3_5000   5000        SRR2589044  A>G           2
+Ara3_5000   5000        SRR2589044  A>C           0
+Ara3_5000   5000        SRR2589044  A>T           0
+Ara3_5000   5000        SRR2589044  C>T           2
+Ara3_5000   5000        SRR2589044  C>G           0
+Ara3_5000   5000        SRR2589044  C>A           2
+Ara3_15000  15000       SRR2584863  A>G           2
+Ara3_15000  15000       SRR2584863  A>C           8
+Ara3_15000  15000       SRR2584863  A>T           1
+Ara3_15000  15000       SRR2584863  C>T           3
+Ara3_15000  15000       SRR2584863  C>G           0
+Ara3_15000  15000       SRR2584863  C>A           6
+Ara3_50000  50000       SRR2584866  A>G           260
+Ara3_50000  50000       SRR2584866  A>C           13
+Ara3_50000  50000       SRR2584866  A>T           9
+Ara3_50000  50000       SRR2584866  C>T           370
+Ara3_50000  50000       SRR2584866  C>G           12
+Ara3_50000  50000       SRR2584866  C>A           24
