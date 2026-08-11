@@ -1,0 +1,4 @@
+sample	generation	run	pass_variants	snps	indels	ts_tv
+Ara3_5000	5000	SRR2589044	9	6	3	2.00
+Ara3_15000	15000	SRR2584863	26	20	6	0.33
+Ara3_50000	50000	SRR2584866	794	688	106	10.86
