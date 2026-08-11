@@ -1,0 +1,7 @@
+file                                     format  type   num_seqs      sum_len  min_len  avg_len  max_len
+data/trimmed/SRR2584863_1.trim.fastq.gz  FASTQ   DNA   1,263,898  179,443,430       25      142      150
+data/trimmed/SRR2584863_2.trim.fastq.gz  FASTQ   DNA   1,263,898  157,134,715       25    124.3      150
+data/trimmed/SRR2584866_1.trim.fastq.gz  FASTQ   DNA   2,021,085  264,242,420       25    130.7      150
+data/trimmed/SRR2584866_2.trim.fastq.gz  FASTQ   DNA   2,021,085  287,818,024       25    142.4      150
+data/trimmed/SRR2589044_1.trim.fastq.gz  FASTQ   DNA     877,521  124,666,111       25    142.1      150
+data/trimmed/SRR2589044_2.trim.fastq.gz  FASTQ   DNA     877,521  110,505,592       25    125.9      150
