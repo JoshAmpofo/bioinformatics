@@ -1,0 +1,4 @@
+sample	generation	run	R1	R2
+Ara3_5000	5000	SRR2589044	data/raw/SRR2589044_1.fastq.gz	data/raw/SRR2589044_2.fastq.gz
+Ara3_15000	15000	SRR2584863	data/raw/SRR2584863_1.fastq.gz	data/raw/SRR2584863_2.fastq.gz
+Ara3_50000	50000	SRR2584866	data/raw/SRR2584866_1.fastq.gz	data/raw/SRR2584866_2.fastq.gz
